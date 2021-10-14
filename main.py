@@ -1,3 +1,6 @@
+#Include PIP INSTALL info at beginning of README
+#pip install emoji --upgrade
+
 #Imports 
 import math
 import time
@@ -7,38 +10,42 @@ hoursperday = 24
 
 #Functions
 
+#Other necessary stuff
+
 #PHASE ONE User Prerequisites
 #Introduce project to the User
-print('***ADOPT A SHELTER PET***\n')
+print('***ADOPT A SHELTER PET***')
+print("\U0001F43E", "\U0001F43E", "\U0001F43E")#pawprints
 time.sleep(2)
-print('This program walks you through') 
+print('\nThis program walks you through') 
 time.sleep(2)
 print('a logical series of considerations')
 time.sleep(2)
 print('and simple calculations')
 time.sleep(2)
-print('to successfully adopt a shelter pet.\n')
+print('to successfully adopt a shelter pet.')
 time.sleep(2)
-print("First, you'll answer questions") 
+print("\nFirst, you'll answer questions") 
 time.sleep(2)
 print('regarding your lifestyle, budget,')
 time.sleep(2)
-print('free time, and living space.\n') 
+print('free time, and living space.') 
 time.sleep(2)
-print("After the Q&A section,")
+print("\nAfter the Q&A section,")
 time.sleep(2)
 print("we'll take a quick look")
 time.sleep(2)
 print('at research regarding shelter pets')
 time.sleep(2)
-print('in the United States.\n')
+print('in the United States.')
 time.sleep(2)
-print("We'll also look at") 
+print("'\nWe'll also look at") 
 time.sleep(2)
 print('what people are saying')
 time.sleep(2)
 print('about shelter pets on Twitter.\n')
 time.sleep(2)
+print('\U0001F496', '\U0001F496', '\U0001F496')
 print("Finally, we'll use YOUR prerequisites")
 time.sleep(2)
 print('to search for YOUR perfect pet match')
@@ -51,7 +58,8 @@ print('***INTRODUCE YOURSELF***\n')
 time.sleep(2)
 firstname = input('Enter your first name: ')
 time.sleep(2)
-print('\nHello ' + firstname + '.')
+print("\U0001F44b")
+print('Hello ' + firstname + '.')
 print("It's nice to meet you.")
 time.sleep(2)
 print('\n***QUESTIONS AND ANSWERS***')
@@ -61,6 +69,7 @@ print('\n***FINANCIAL COMMITMENT***')
 time.sleep(2)
 print('\nYou told us you plan to adopt a shelter DOG.\n')
 time.sleep(2)
+print("\U0001F9AE", "\U0001F436", "\U0001F429")
 print('According to ROVER.com,')
 time.sleep(2)
 print('the annual cost of owning a dog -') 
@@ -89,6 +98,7 @@ print("Let's estimate an annual cost between")
 time.sleep(2)
 print('$1000 and $1500 to be safe.\n') 
 time.sleep(2)
+print('\U0001F4B2', '\U0001F4B2', '\U0001F4B2')
 print('Can you afford this financial commitment?')
 time.sleep(2)
 money = input('Type y for YES or n for NO: ')
@@ -105,7 +115,9 @@ if money == 'n':
     print('There will always be AWESOME dogs looking for FOREVER homes.')
     exit()
 else:
-    print("\nExcellent! You're one step closer to sucessfully adopting a shelter pet.")
+    # beaming face with smiling eyes
+    print("\U0001F601")
+    print("Excellent! You're one step closer to sucessfully adopting a shelter pet.")
 time.sleep(2)
 #FREE TIME PER DAY
 print('\n***FREE TIME PER DAY***')
@@ -128,13 +140,15 @@ work = input('Hours spent working daily: ')
 time.sleep(2)
 errands = input('Hours spent running errands daily: ')
 time.sleep(2)
-gym = input('Hours spent exercising daily: ')
+gym = input('Hours spent at the gym daily: ')
 time.sleep(2)
 children = input('Hours spent caring for children or other adults daily: ')
 time.sleep(2)
 community = input('Hours spent volunteering, coaching, or at church daily: ')
 time.sleep(2)
-print("\nWhew! Aren't you exhausted?\n")
+# grinning face with sweat
+print("\U0001F605")
+print("Whew! Aren't you exhausted?\n")
 time.sleep(2)
 print('The American Humane Society recommends')
 time.sleep(2)
@@ -157,7 +171,9 @@ if hoursfordog < 3:
    print('There will always be AWESOME dogs looking for FOREVER homes.')
    exit()
 else:
-   print("\nExcellent! You're one step closer to sucessfully adopting a shelter pet.")
+   # beaming face with smiling eyes
+   print("\U0001F601")
+   print("Excellent! You're one step closer to sucessfully adopting a shelter pet.")
 time.sleep(2)
 #REQUIREMENT...(script above) use 3+ methods with returned value used again in the code
 #EXPERIENCED PET OWNER 
@@ -180,7 +196,7 @@ print('\n***INDOOR + OUTDOOR LIVING SPACE***')
 time.sleep(2)
 print('\nWhen considering what size dog to adopt,')
 time.sleep(2)
-print('look at the the size of your living space.')
+print('consider the size of your living space.')
 time.sleep(2)
 #Space corresponds to Size in pet dictionary: Small Medium Large
 print('\nWhich statement best describes your indoor+outdoor living space?')
@@ -200,7 +216,7 @@ elif space == 's':
 else:
     print('\nYour living space will accomodate a LARGE dog.')
 time.sleep(2)
-print('\nBased on your available living space, what size dog is best for you?')
+print('\nREALITY CHECK: What size dog is best for you?')
 time.sleep(2)
 bestsize = input('\nType s for Small, m for Medium, or l for Large: ')
 time.sleep(2)
@@ -217,32 +233,37 @@ owner_energy = input('\nType s for sedentary, m for moderate, or h for high ener
 time.sleep(2)
 print('\nOnly TWO more questions!')
 time.sleep(2)
+# smiling face with halo
+print("\U0001F607")
 print('PATIENCE and FOLLOW-THROUGH are important traits in a pet owner.')
 time.sleep(2)
 #SOCIAL ACTIVITY
 #Solo Pursuits: 1 dog HH, Small Groups: Reliably Social, Comfortable in Crowds: Never Met a Stranger
 print('\n***SOCIAL SETTING***')
 time.sleep(2)
-print('Your dog will look to you as Pack Leader for his/her social cues.')
+print('\nYour dog will look to you as Pack Leader for his/her social cues.')
 time.sleep(2)
 print('If you are anxious or relaxed, the dog will mirror your energy.')
 time.sleep(2)
-print('What type of social setting works best for you?') 
+print('\nWhat type of social setting works best for you?') 
 time.sleep(2)
-print('Options: Solo Pursuits, Small Groups, or Comfortable in Crowds') 
+print('Options: Solo Pursuits, Small Groups, or Comfortable in Crowds\n') 
 time.sleep(2)
 owner_social = input('Type sp for Solo Pursuits, sg for Small Groups, or cc for Comfortable in Crowds: ')
 time.sleep(2)
 #DEALBREAKER! Male or Female pet
 #used as deciding factor if more than one matching pet remains at end of program
-print('\n***PREFERRED GENDER***')
+print('\n***PET GENDER***')
 time.sleep(2)
-print('Does it matter to you if your dog is male or female?')
+print('\nDoes it matter to you if your dog is male or female?')
 time.sleep(2)
 gender_pref = input('Type m for Male, f for Female, or n for Neutral: ')
 time.sleep(2)
 print('\n***PHASE ONE COMPLETED***')
 print('\nCongratulations! You completed the Prerequisites section.')
+time.sleep(2)
+# beaming face with smiling eyes
+print("\U0001F601")
 print("You're one step closer to sucessfully adopting a shelter pet.\n")
 
 ##PHASE TWO: Data Analysis + Visualization
