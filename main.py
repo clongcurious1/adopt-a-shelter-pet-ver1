@@ -1,9 +1,12 @@
 #Imports 
 import math
 import time
+
 #Variables
 hoursperday = 24
+
 #Functions
+
 #PHASE ONE User Prerequisites
 #Introduce project to the User
 print('***ADOPT A SHELTER PET***\n')
@@ -134,11 +137,16 @@ time.sleep(2)
 print("\nWhew! Aren't you exhausted?\n")
 time.sleep(2)
 print('The American Humane Society recommends')
+time.sleep(2)
 print('that pet owners have') 
+time.sleep(2)
 print('a minimum of 3 free hours per day')
+time.sleep(2)
 print('to devote to caring for, training, and playing with their pets.\n')
+time.sleep(2)
 hoursfordog = int(hoursperday) - int(sleep) - int(cook) - int(groom) - int(commute) - int(work) - int(errands) - int(gym) - int(children) - int(community)
 print('You indicated you have ' + str(hoursfordog) + ' hours of FREE time daily.')
+time.sleep(2)
 if hoursfordog < 3: 
    print('\nThank you for the honest assessment of your free time per day.')
    time.sleep(2)
@@ -153,17 +161,90 @@ else:
 time.sleep(2)
 #REQUIREMENT...(script above) use 3+ methods with returned value used again in the code
 #EXPERIENCED PET OWNER 
+print('\n***PREVIOUS PET OWNERSHIP EXPERIENCE***')
+time.sleep(2)
+print('\nHave you been the primary caregiver for a dog before?') 
+time.sleep(2)
+experience = input('Type y for YES or n for NO: ') 
+time.sleep(2)
 #Corresponds to pet dictionary: Special Needs
+if experience == 'y':
+    print('\nWould you adopt a dog with Special Needs?')
+    time.sleep(2)
+    specialneeds = input('Type y for YES or n for NO:')
+else:
+    print('\nWe recommend that NOVICE pet owners adopt a SENIOR dog.')
+    time.sleep(2)
 #INDOOR OUTDOOR LIVING SPACE
-#Corresponds to pet dictionary: Size Small Medium Large
-#HOW OLD ARE YOU IN DOG YEARS
-#REQUIREMENT...item above...Convert user input to another type and display (years to dog years)
+print('\n***INDOOR + OUTDOOR LIVING SPACE***')
+time.sleep(2)
+print('\nWhen considering what size dog to adopt,')
+time.sleep(2)
+print('look at the the size of your living space.')
+time.sleep(2)
+#Space corresponds to Size in pet dictionary: Small Medium Large
+print('\nWhich statement best describes your indoor+outdoor living space?')
+time.sleep(2)
+print('Apartment or condo with nearby green space?')
+time.sleep(2)
+print('Modest home with fenced yard?')
+time.sleep(2)
+print('Large home with 1+ acres of fenced property?')
+time.sleep(2)
+space = input('\nType a for Apt.Condo, s for Small Home, or l for House.Land: ')
+time.sleep(2)
+if space == 'a':
+    print('\nA SMALL dog may be most comfortable in an apartment or condominium.')
+elif space == 's':
+    print ('\nA MEDIUM dog may be most comfortable in a modest home.')
+else:
+    print('\nYour living space will accomodate a LARGE dog.')
+time.sleep(2)
+print('\nBased on your available living space, what size dog is best for you?')
+time.sleep(2)
+bestsize = input('\nType s for Small, m for Medium, or l for Large: ')
+time.sleep(2)
 #YOUR ENERGY LEVEL
-#Corresponds to pet dictionary value Senior Adult Puppy
-#SOCIAL PATTERNS
+#owner_energy: Low Moderate High
+#Corresponds to pet_energy pet dictionary value: Low Moderate High
+print('\n***YOUR ENERGY LEVEL***')
+time.sleep(2)
+print('\nHow would you describe your average energy level?')
+time.sleep(2)
+print('Are you sedentary, moderately active, or high energy?')
+time.sleep(2) 
+owner_energy = input('\nType s for sedentary, m for moderate, or h for high energy: ')
+time.sleep(2)
+print('\nOnly TWO more questions!')
+time.sleep(2)
+print('PATIENCE and FOLLOW-THROUGH are important traits in a pet owner.')
+time.sleep(2)
+#SOCIAL ACTIVITY
 #Solo Pursuits: 1 dog HH, Small Groups: Reliably Social, Comfortable in Crowds: Never Met a Stranger
-#MALE OR FEMALE PET
+print('\n***SOCIAL SETTING***')
+time.sleep(2)
+print('Your dog will look to you as Pack Leader for his/her social cues.')
+time.sleep(2)
+print('If you are anxious or relaxed, the dog will mirror your energy.')
+time.sleep(2)
+print('What type of social setting works best for you?') 
+time.sleep(2)
+print('Options: Solo Pursuits, Small Groups, or Comfortable in Crowds') 
+time.sleep(2)
+owner_social = input('Type sp for Solo Pursuits, sg for Small Groups, or cc for Comfortable in Crowds: ')
+time.sleep(2)
+#DEALBREAKER! Male or Female pet
 #used as deciding factor if more than one matching pet remains at end of program
+print('\n***PREFERRED GENDER***')
+time.sleep(2)
+print('Does it matter to you if your dog is male or female?')
+time.sleep(2)
+gender_pref = input('Type m for Male, f for Female, or n for Neutral: ')
+time.sleep(2)
+print('\n***PHASE ONE COMPLETED***')
+print('\nCongratulations! You completed the Prerequisites section.')
+print("You're one step closer to sucessfully adopting a shelter pet.\n")
+
 ##PHASE TWO: Data Analysis + Visualization
 #DATA ON US SHELTER PETS
 #Analyze open-source JSON file re: shelter pets (dogs) in US
@@ -176,49 +257,53 @@ time.sleep(2)
 #let's check Twitter to see what people are sharing about adopting a rescue DOG
 #REQUIREMENT: Analyze text and display info about it, Visualize data
 #Use aggregated tweets to create a Word cloud shaped like a dog (dog "mask")
+
 #YOU ARE READY FOR PHASE 3
 #Congratulations! 
-# You appear to be a level-headed human who can delay gratification!
-# You took the time to examine your lifestyle and your resources.
-#You also did some preliminary research about shelter pets in the USA.
+#You appear to be a level-headed human who can delay gratification!
+#You patiently examinded your lifestyle and your resources.
+#You also took the time to review data about shelter pets in the USA.
 #SHELTER VISIT 
-#In this exercise, you will practice meeting pets 
-#and considering their attributes 
-#against your lifestyle prerequisites. 
+#In this exercise, you will evauluate available pets, 
+#comparing their attributes 
+#against your adoption prerequisites. 
 #On the day you visit our imaginary shelter
 #there are 10 pets available for adoption.
 #Let's meet the pets assembled in the Green Room. 
 #MEET THE PETS
 #REQUIREMENT: create DICTIONARY, several values, retrieve at least 1 value & use it
 #Today's DOGS available for adoption are:
-# Print dictionary contents as Pet Name, Special Needs, Size, Age, Life Stage, Social, Gender
+# Print dictionary contents as Pet Name, Special Needs, Size, Life Stage, Social, Gender
 #PET MATCH
-#perfectpet = []
-#LOOP: Iterate over values in Owner Dictionary vs. values in Pets Dictionary
-#use .append or .delete methods to alter list of pets matching each prerequisite
+#perfectpet = [start with FULL set]
+#LOOP: Iterate over values in Owner Dictionary
+#Compare against value in same indice position in Pet Dictionary
+#In each loop, additional dogs will be deleted
 #DECISION
 #If perfectpet < 1:
 #We're sorry. None of our available pets meet your prerequisites.
 #Please return next week and try again. 
 #There will always be AWESOME dogs looking for STABLE forever homes. Exit game.
 #elif perfect == 1:
-#Congratulations. You found your perfect (pretend) shelter pet!
+#Congratulations. You found your perfect shelter pet!
 #else:
-#Surprise! You found multiple (pretend) pets that match your criteria.
+#Surprise! You found multiple pets that match your criteria.
+
 #PHASE FOUR: COUNTDOWN TIMER AND PROGRAM ENDS
 #COUNTING DOWN TO A REAL RESCUE 
 #REQUIREMENT: Calculate + display data based on an external factor (like a count down)
-#You've come so far in your search for the perfect shelter pet.
-#Let's create a Countdown Timer to help you manage preparations in real life. 
+#How are you feeling? 
+#Ready to adopt a shelter pet in real life! 
+#Use our Countdown Timer to get ready for your BIG DAY.
 #Assess your personal situation (money, time, living space, etc.)
-#Create list of pet prerequisites
+#Create YOUR list of pet prerequisites
 #Visit local shelter and assess available pets
 #Find a match? Fill out adoption paperwork
-#No match? Come back each weekend for a month
-#Wait 7-10 days for adoption application to be reviewed and decided upon
-#Receive adoption clearance
+#No match? Come back next weekend 
+#Wait 7-10 days for review and approval of adoption application 
+#Receive adoption decision
 #Buy supplies 
-# Pet-proof your indoor and outdoor living space
-#END GOAL: Visit shelter and pick up your pet
+#Pet-proof your indoor and outdoor living space
+#END GOAL: TODAY'S THE DAY! Bring home your new 4-Legged Friend
 #Thank you for taking the time to explore successfully adopting a shelter pet. 
 #Bonus: Add a Turtle graphics drawing of a dog with the words Rescue Foster Adopt
