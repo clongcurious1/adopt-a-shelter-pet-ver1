@@ -1,7 +1,4 @@
-#Include PIP INSTALL info at beginning of README
-#pip install emoji --upgrade
-
-#Imports 
+#Import 
 import math
 import time
 
@@ -220,16 +217,62 @@ print('\nREALITY CHECK: What size dog is best for you?')
 time.sleep(2)
 bestsize = input('\nType s for Small, m for Medium, or l for Large: ')
 time.sleep(2)
-#YOUR ENERGY LEVEL
-#owner_energy: Low Moderate High
-#Corresponds to pet_energy pet dictionary value: Low Moderate High
-print('\n***YOUR ENERGY LEVEL***')
+#LIFE STAGE
+#Owner Age corresponds to recommended dog life stage
+print('\n***LIFE STAGE***\n')
 time.sleep(2)
-print('\nHow would you describe your average energy level?')
+print('Adopting a shelter pet is a lifetime commitment.\n')
 time.sleep(2)
-print('Are you sedentary, moderately active, or high energy?')
+print('Although people are often excited by the idea of adopting a puppy,')
+time.sleep(2)
+print('we recommend adopting a dog with a life stage that matches yours.\n')
+time.sleep(2)
+print('The average life expectancy for an adult in 2020 is 78 years.')
 time.sleep(2) 
-owner_energy = input('\nType s for sedentary, m for moderate, or h for high energy: ')
+print('The average life expectancy for a dog is 12 years.\n')
+time.sleep(2)
+print('78 human years (adult life span) divided by 12 dog years (dog life span)')
+time.sleep(2)
+print('equates to 6.5 human years for each dog year.\n')
+time.sleep(2)
+print("Let's divide your age by 6.5 to find the equivalent in dog years.\n")
+time.sleep(2)
+owner_age = input('Enter your age in years. Use a whole number between 1 and 100: \n')
+time.sleep(2)
+if int(owner_age) < 16:
+    print("We're sorry.")
+    print('For this exercise, you must be at least 16 years old to adopt a shelter dog.')
+    time.sleep(3)
+    print('Please consider volunteering at your local animal shelter instead.')
+    exit()
+elif int(owner_age) > 66:
+    print("We're sorry.")
+    print("The maximum recommended age of a pet owner is 66 years old.")
+    time.sleep(2)
+    print("That's the average human life expenctancy (78yrs)")
+    print('minus the average dog life expectancy (12yrs).')
+    time.sleep(3)
+    print('Please consider volunteering at your local animal shelter instead.')
+    exit()
+else:
+    dog_years = int(owner_age) / 6.5
+    time.sleep(2)
+    print('\nVoila! Your age in dog years is', int(dog_years), 'years.')
+    time.sleep(2)
+print("\nNow use your age in dog years to find the recommended pet Life Stage below:")
+time.sleep(2)
+print('\nPuppy...less than 1 year old')
+print ('\nRemember: Only experienced dog owners with ample leisure time should adopt a puppy.')
+time.sleep(3)
+print('\nAdolescent...1-2 years old')
+time.sleep(2)
+print('\nAdult...3-6 years old')
+time.sleep(2)
+print('\nSenior...7+ years old')
+time.sleep(2)
+print('Which pet Life Stage aligns with your age in dog years?')
+time.sleep(2)
+lifestage = input('Type p for Puppy, a for Adolescent, d for Adult, or s for Senior: ')
 time.sleep(2)
 print('\nOnly TWO more questions!')
 time.sleep(2)
@@ -237,27 +280,27 @@ time.sleep(2)
 print("\U0001F607")
 print('PATIENCE and FOLLOW-THROUGH are important traits in a pet owner.')
 time.sleep(2)
-#SOCIAL ACTIVITY
+#ENERGY
 #Solo Pursuits: 1 dog HH, Small Groups: Reliably Social, Comfortable in Crowds: Never Met a Stranger
-print('\n***SOCIAL SETTING***')
+print('\n***ENERGY***')
 time.sleep(2)
 print('\nYour dog will look to you as Pack Leader for his/her social cues.')
 time.sleep(2)
 print('If you are anxious or relaxed, the dog will mirror your energy.')
 time.sleep(2)
-print('\nWhat type of social setting works best for you?') 
+print('Which description below best describes you?') 
 time.sleep(2)
-print('Options: Solo Pursuits, Small Groups, or Comfortable in Crowds\n') 
+print('Solo Pursuits, Small Groups, or Comfortable in Crowds?\n') 
 time.sleep(2)
-owner_social = input('Type sp for Solo Pursuits, sg for Small Groups, or cc for Comfortable in Crowds: ')
+energy = input('Type sp for Solo Pursuits, sg for Small Groups, or cc for Comfortable in Crowds: ')
 time.sleep(2)
 #DEALBREAKER! Male or Female pet
 #used as deciding factor if more than one matching pet remains at end of program
-print('\n***PET GENDER***')
+print('\n***MALE OR FEMALE***')
 time.sleep(2)
 print('\nDoes it matter to you if your dog is male or female?')
 time.sleep(2)
-gender_pref = input('Type m for Male, f for Female, or n for Neutral: ')
+mfn_pref = input('Type m for Male, f for Female, or n for Neutral: ')
 time.sleep(2)
 print('\n***PHASE ONE COMPLETED***')
 print('\nCongratulations! You completed the Prerequisites section.')
@@ -268,9 +311,53 @@ print("You're one step closer to sucessfully adopting a shelter pet.\n")
 
 ##PHASE TWO: Data Analysis + Visualization
 #DATA ON US SHELTER PETS
+print('***SHELTER PET STATISTICS***')
+time.sleep(2)
+print('\nOn the surface,') 
+time.sleep(2)
+print('America appears to be a nation of PET LOVERS.')
+time.sleep(2)
+print('According to the American Pet Products Association') 
+time.sleep(2)
+print('APPA 2020 Pet Owner Survey:')
+time.sleep(2)
+print('*Americans spent over $100 BILLION') 
+time.sleep(2)
+print('on pet products and services in 2020')
+time.sleep(2)
+print('*70 percent of all US households include at least 1 pet')
+time.sleep(2)
+print('*44 percent of all US households include at least 1 dog')
+time.sleep(2)
+print('\nSadly, according to the ASPCA,') 
+time.sleep(2)
+print('7.6 million companion animals end up in US shelters each year.')
+time.sleep(2)
+print('\nMost are surrendered due to behavior problems,') 
+time.sleep(2)
+print('outgrowing their living space, and/or economic instability.')
+time.sleep(2)
+print('\n35 percent of these animals (2.7 million)')
+time.sleep(2) 
+print('will be EUTHANIZED within 12 months.') 
+time.sleep(2)
+
 #Analyze open-source JSON file re: shelter pets (dogs) in US
-#REQUIREMENT: Read JSON file into your app MUST USE pc of data from file in the program
+#REQUIREMENT: Read file into your app MUST USE pc of data from file in the program
+#save as variable "data"
+#show headers
+#pull two attributes out of the dataset + plot them
+#Dogs Adopted vs. Euthanized
+#Question: Does using data from the set in a plot = using it in the program? 
 #REQUIREMENT: Visualize data in color plot
+
+#User closes screen with the plot
+keepgoing = input('Press c to Continue or q to Quit: ')
+if keepgoing == 'q':
+    exit()
+else:
+    print('That was interesting!')
+
 #SHELTER PETS AND SOCIAL MEDIA
 #REQUIREMENT: Connect to an API, read data into your app
 #Use Twython and Twiter API, aggregate tweets using DOG + "shelter", "rescue", "adopt"
@@ -279,18 +366,24 @@ print("You're one step closer to sucessfully adopting a shelter pet.\n")
 #REQUIREMENT: Analyze text and display info about it, Visualize data
 #Use aggregated tweets to create a Word cloud shaped like a dog (dog "mask")
 
-#YOU ARE READY FOR PHASE 3
-#Congratulations! 
-#You appear to be a level-headed human who can delay gratification!
-#You patiently examinded your lifestyle and your resources.
-#You also took the time to review data about shelter pets in the USA.
+print('\n***PHASE TWO COMPLETED***')
+print('You appear to be a level-headed human who can delay gratification!')
+print('You patiently examinded your lifestyle and resources.')
+print('You also reviewed data and social media posts re: shelter pets.')
+time.sleep(2)
+print('\nCongratulations!')
+# beaming face with smiling eyes
+print("\U0001F601")
+print("You're one step closer to sucessfully adopting a shelter pet.\n")
+
+#PHASE 3
 #SHELTER VISIT 
-#In this exercise, you will evauluate available pets, 
+#In this exercise, we will evauluate available pets, 
 #comparing their attributes 
-#against your adoption prerequisites. 
+#against the adoption prerequisites you entered earlier. 
 #On the day you visit our imaginary shelter
-#there are 10 pets available for adoption.
-#Let's meet the pets assembled in the Green Room. 
+#there are VARIABLEnumber pets available for adoption.
+#Let's start the matching process! 
 #MEET THE PETS
 #REQUIREMENT: create DICTIONARY, several values, retrieve at least 1 value & use it
 #Today's DOGS available for adoption are:
@@ -302,13 +395,13 @@ print("You're one step closer to sucessfully adopting a shelter pet.\n")
 #In each loop, additional dogs will be deleted
 #DECISION
 #If perfectpet < 1:
-#We're sorry. None of our available pets meet your prerequisites.
+#We're sorry. None of our available pets met your prerequisites.
 #Please return next week and try again. 
 #There will always be AWESOME dogs looking for STABLE forever homes. Exit game.
 #elif perfect == 1:
-#Congratulations. You found your perfect shelter pet!
+#KISMET! You found your ONE AND ONLY perfect shelter pet!
 #else:
-#Surprise! You found multiple pets that match your criteria.
+#Surprise! Multiple pets met your criteria. How will you decide?
 
 #PHASE FOUR: COUNTDOWN TIMER AND PROGRAM ENDS
 #COUNTING DOWN TO A REAL RESCUE 
