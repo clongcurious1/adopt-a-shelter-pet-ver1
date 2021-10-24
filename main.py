@@ -1,16 +1,28 @@
-#Import 
+#Notes re: packages installed - see README for details
+#Imports 
 import math
 import time
-
+#Functions
 #Variables
 hoursperday = 24
-
-#Functions
-
+firstname = str()
+specialneeds = str()
+livingspace = str()
+lifestage = str()
+social = str()
+sex = ()
 #Other necessary stuff
-
-#PHASE ONE User Prerequisites
-#Introduce project to the User
+owner = {}
+key1 = firstname
+key2 = specialneeds
+key3 = livingspace
+key4 = lifestage
+key5 = social
+key6 = sex
+#SECTION ONE Chatbot: User Prerequisites
+#Introduce project to the User and collect input
+#Elimination round (3 questions) force game EXIT
+#Users who make it through elimination round continue to Round Two: Q&A section
 print('***ADOPT A SHELTER PET***')
 print("\U0001F43E", "\U0001F43E", "\U0001F43E")#pawprints
 time.sleep(2)
@@ -28,7 +40,7 @@ print('regarding your lifestyle, budget,')
 time.sleep(2)
 print('free time, and living space.') 
 time.sleep(2)
-print("\nAfter the Q&A section,")
+print("\nAfter completing the Q&A section,")
 time.sleep(2)
 print("we'll take a quick look")
 time.sleep(2)
@@ -51,16 +63,57 @@ print('at an imaginary Animal Shelter.\n')
 time.sleep(2)
 print("Let's get started!\n")
 time.sleep(2)
-print('***INTRODUCE YOURSELF***\n')
+
+#DEALBREAKER responses that will force an Exit
+print('***ROUND ONE: ELIMINATION***\n')
 time.sleep(2)
-firstname = input('Enter your first name: ')
+print("We'll start with a brief ELIMINATION ROUND.\n")
 time.sleep(2)
-print("\U0001F44b")
-print('Hello ' + firstname + '.')
-print("It's nice to meet you.")
+print("Let's establish that you meet MINIMAL criteria to adopt a shelter pet.\n")
 time.sleep(2)
-print('\n***QUESTIONS AND ANSWERS***')
+print('Here we go.')
+
+#AGE REQUIREMENT
+#Owner Age corresponds to recommended dog life stage
+print('\n***AGE REQUIREMENT***\n')
 time.sleep(2)
+print('Adopting a shelter pet is a lifetime commitment.\n')
+time.sleep(2)
+print('Although people are often excited by the idea of adopting a puppy,')
+time.sleep(2)
+print('we recommend adopting a dog with a life stage that matches yours.\n')
+time.sleep(2)
+print('The average life expectancy for an adult in 2020 is 78 years.\n')
+time.sleep(2) 
+print('The average life expectancy for a dog is 12 years.\n')
+time.sleep(2)
+print('78 human years (adult life span) divided by 12 dog years (dog life span)')
+time.sleep(2)
+print('equates to 6.5 human years for each dog year.\n')
+time.sleep(2)
+print("Let's divide your age by 6.5 to find the equivalent in dog years.\n")
+time.sleep(2)
+owner_age = input('Enter your age in years. Use a whole number between 1 and 100: \n')
+time.sleep(2)
+if int(owner_age) < 16:
+    print("We're sorry.")
+    print('For this exercise, you must be at least 16 years old to adopt a shelter dog.')
+    print('Please consider volunteering at your local animal shelter instead.')
+    exit()
+elif int(owner_age) > 66:
+    print("We're sorry.")
+    print("The maximum recommended age of a pet owner is 66 years old.")
+    print("That's the average human life expenctancy (78yrs)")
+    print('minus the average dog life expectancy (12yrs).')
+    time.sleep(2)
+    print('Please consider volunteering at your local animal shelter instead.')
+    exit()
+else:
+    dog_years = int(owner_age) / 6.5
+    print('\nVoila! Your age in dog years is', int(dog_years), 'years.')
+    print("Let's continue.")
+    time.sleep(2)
+
 #FINANCIAL COMMITMENT
 print('\n***FINANCIAL COMMITMENT***')
 time.sleep(2)
@@ -98,7 +151,7 @@ time.sleep(2)
 print('\U0001F4B2', '\U0001F4B2', '\U0001F4B2')
 print('Can you afford this financial commitment?')
 time.sleep(2)
-money = input('Type y for YES or n for NO: ')
+money = input('Type y for YES or n for NO: ').lower()
 time.sleep(2)
 #Game will end if user answers NO
 #If Y, proceed
@@ -115,13 +168,16 @@ else:
     # beaming face with smiling eyes
     print("\U0001F601")
     print("Excellent! You're one step closer to sucessfully adopting a shelter pet.")
-time.sleep(2)
+    time.sleep(2)
+
 #FREE TIME PER DAY
 print('\n***FREE TIME PER DAY***')
 time.sleep(2)
 print('\nInstructions: Enter the number of hours you spend') 
 time.sleep(2)
 print('on each of the activities below, per day.') 
+time.sleep(2)
+print("Please type a whole number between 0-24 for each answer.")
 time.sleep(2)
 print('Hours spent is calculated using whole numbers.\n')
 time.sleep(2)
@@ -170,24 +226,37 @@ if hoursfordog < 3:
 else:
    # beaming face with smiling eyes
    print("\U0001F601")
-   print("Excellent! You're one step closer to sucessfully adopting a shelter pet.")
+   print("Excellent! You're one step closer to sucessfully adopting a shelter pet.\n")
+   time.sleep(2)
+
+#Collect Owner Input to create a Dictionary
+print('***ROUND TWO: PREREQUISITES***\n')
+print('***INTRODUCE YOURSELF***\n')
 time.sleep(2)
-#REQUIREMENT...(script above) use 3+ methods with returned value used again in the code
+value1 = input('Enter your first name: ') 
+time.sleep(2)
+print("\U0001F44b")
+print('Hello ' + value1 + '.')
+print("It's nice to meet you.")
+time.sleep(2)
+
 #EXPERIENCED PET OWNER 
 print('\n***PREVIOUS PET OWNERSHIP EXPERIENCE***')
 time.sleep(2)
 print('\nHave you been the primary caregiver for a dog before?') 
 time.sleep(2)
-experience = input('Type y for YES or n for NO: ') 
+experience = input('Type y for YES or n for NO: ').lower() 
 time.sleep(2)
 #Corresponds to pet dictionary: Special Needs
 if experience == 'y':
     print('\nWould you adopt a dog with Special Needs?')
     time.sleep(2)
-    specialneeds = input('Type y for YES or n for NO:')
+    key2 = specialneeds
+    value2 = input('Type y for YES or n for NO:')
 else:
     print('\nWe recommend that NOVICE pet owners adopt a SENIOR dog.')
     time.sleep(2)
+
 #INDOOR OUTDOOR LIVING SPACE
 print('\n***INDOOR + OUTDOOR LIVING SPACE***')
 time.sleep(2)
@@ -204,62 +273,27 @@ print('Modest home with fenced yard?')
 time.sleep(2)
 print('Large home with 1+ acres of fenced property?')
 time.sleep(2)
-space = input('\nType a for Apt.Condo, s for Small Home, or l for House.Land: ')
+key3 = livingspace
+value3 = input('\nType a for Apt.Condo, s for Small Home, or l for House.Land: ').lower()
 time.sleep(2)
-if space == 'a':
+if value3 == 'a':
     print('\nA SMALL dog may be most comfortable in an apartment or condominium.')
-elif space == 's':
+elif value3 == 's':
     print ('\nA MEDIUM dog may be most comfortable in a modest home.')
 else:
     print('\nYour living space will accomodate a LARGE dog.')
 time.sleep(2)
 print('\nREALITY CHECK: What size dog is best for you?')
 time.sleep(2)
-bestsize = input('\nType s for Small, m for Medium, or l for Large: ')
+bestsize = input('\nType s for Small, m for Medium, or l for Large: ').lower()
 time.sleep(2)
-#LIFE STAGE
-#Owner Age corresponds to recommended dog life stage
-print('\n***LIFE STAGE***\n')
+
+#Life Stage
+print('\n***LIFE STAGE***')
 time.sleep(2)
-print('Adopting a shelter pet is a lifetime commitment.\n')
+print('\nWe established your age in dog years is', int(dog_years), 'years.')
 time.sleep(2)
-print('Although people are often excited by the idea of adopting a puppy,')
-time.sleep(2)
-print('we recommend adopting a dog with a life stage that matches yours.\n')
-time.sleep(2)
-print('The average life expectancy for an adult in 2020 is 78 years.')
-time.sleep(2) 
-print('The average life expectancy for a dog is 12 years.\n')
-time.sleep(2)
-print('78 human years (adult life span) divided by 12 dog years (dog life span)')
-time.sleep(2)
-print('equates to 6.5 human years for each dog year.\n')
-time.sleep(2)
-print("Let's divide your age by 6.5 to find the equivalent in dog years.\n")
-time.sleep(2)
-owner_age = input('Enter your age in years. Use a whole number between 1 and 100: \n')
-time.sleep(2)
-if int(owner_age) < 16:
-    print("We're sorry.")
-    print('For this exercise, you must be at least 16 years old to adopt a shelter dog.')
-    time.sleep(3)
-    print('Please consider volunteering at your local animal shelter instead.')
-    exit()
-elif int(owner_age) > 66:
-    print("We're sorry.")
-    print("The maximum recommended age of a pet owner is 66 years old.")
-    time.sleep(2)
-    print("That's the average human life expenctancy (78yrs)")
-    print('minus the average dog life expectancy (12yrs).')
-    time.sleep(3)
-    print('Please consider volunteering at your local animal shelter instead.')
-    exit()
-else:
-    dog_years = int(owner_age) / 6.5
-    time.sleep(2)
-    print('\nVoila! Your age in dog years is', int(dog_years), 'years.')
-    time.sleep(2)
-print("\nNow use your age in dog years to find the recommended pet Life Stage below:")
+print("\nCompare your age in DOG YEARS to the pet Life Stage below:")
 time.sleep(2)
 print('\nPuppy...less than 1 year old')
 print ('\nRemember: Only experienced dog owners with ample leisure time should adopt a puppy.')
@@ -268,11 +302,12 @@ print('\nAdolescent...1-2 years old')
 time.sleep(2)
 print('\nAdult...3-6 years old')
 time.sleep(2)
-print('\nSenior...7+ years old')
+print('\nSenior...7+ years old\n')
 time.sleep(2)
 print('Which pet Life Stage aligns with your age in dog years?')
 time.sleep(2)
-lifestage = input('Type p for Puppy, a for Adolescent, d for Adult, or s for Senior: ')
+key4 = lifestage
+value4 = input('Type p for Puppy, a for Adolescent, d for Adult, or s for Senior: ').lower()
 time.sleep(2)
 print('\nOnly TWO more questions!')
 time.sleep(2)
@@ -280,34 +315,53 @@ time.sleep(2)
 print("\U0001F607")
 print('PATIENCE and FOLLOW-THROUGH are important traits in a pet owner.')
 time.sleep(2)
-#ENERGY
+
+#SOCIAL BEHAVIOR
 #Solo Pursuits: 1 dog HH, Small Groups: Reliably Social, Comfortable in Crowds: Never Met a Stranger
-print('\n***ENERGY***')
+print('\n***SOCIAL BEHAVIOR***')
 time.sleep(2)
 print('\nYour dog will look to you as Pack Leader for his/her social cues.')
 time.sleep(2)
-print('If you are anxious or relaxed, the dog will mirror your energy.')
+print('If you are anxious or relaxed, the dog will mirror your energy.\n')
 time.sleep(2)
-print('Which description below best describes you?') 
+print('Which description below best describes your Social Behavior?') 
 time.sleep(2)
 print('Solo Pursuits, Small Groups, or Comfortable in Crowds?\n') 
 time.sleep(2)
-energy = input('Type sp for Solo Pursuits, sg for Small Groups, or cc for Comfortable in Crowds: ')
+key5 = social
+value5 = input('Type sp for Solo Pursuits, sg for Small Groups, or cc for Comfortable in Crowds: ').lower()
 time.sleep(2)
-#DEALBREAKER! Male or Female pet
-#used as deciding factor if more than one matching pet remains at end of program
-print('\n***MALE OR FEMALE***')
+
+#Preference for Male or Female pet
+print('\n***MALE OR FEMALE PET?***')
 time.sleep(2)
-print('\nDoes it matter to you if your dog is male or female?')
+print('\nFor this exercise, please select either a MALE or FEMALE pet.')
 time.sleep(2)
-mfn_pref = input('Type m for Male, f for Female, or n for Neutral: ')
+key6 = sex
+value6 = input("Type m for Male or f for Female: ").lower()
 time.sleep(2)
+
+#Leave Section One
 print('\n***PHASE ONE COMPLETED***')
-print('\nCongratulations! You completed the Prerequisites section.')
+print('\nCongratulations! You completed the Prerequisites section.\n')
 time.sleep(2)
 # beaming face with smiling eyes
 print("\U0001F601")
 print("You're one step closer to sucessfully adopting a shelter pet.\n")
+
+#PRINT User Dictionary Here
+#started with owner{}
+#established key1 = firstname
+print('We recorded the answers you gave us as follows:\n')
+key1 = firstname
+key2 = specialneeds
+key3 = livingspace
+key4 = lifestage
+key5 = social
+key6 = sex
+#owner {key1: value1, key2: value2, key3: value3, key4: value4, key5: value5, key6: value6 }
+owner = {key1: value1, key2: value2, key3: value3, key4: value4, key5: value5, key6: value6}
+print(owner)
 
 ##PHASE TWO: Data Analysis + Visualization
 #DATA ON US SHELTER PETS
