@@ -7,7 +7,7 @@ import time
 hoursperday = 24
 firstname = str()
 specialneeds = str()
-livingspace = str()
+bestsize = str()
 lifestage = str()
 social = str()
 sex = ()
@@ -15,11 +15,11 @@ sex = ()
 owner = {}
 key1 = firstname
 key2 = specialneeds
-key3 = livingspace
+key3 = bestsize
 key4 = lifestage
 key5 = social
 key6 = sex
-#SECTION ONE Chatbot: User Prerequisites
+#SECTION ONE Chatbot
 #Introduce project to the User and collect input
 #Elimination round (3 questions) force game EXIT
 #Users who make it through elimination round continue to Round Two: Q&A section
@@ -48,7 +48,7 @@ print('at research regarding shelter pets')
 time.sleep(2)
 print('in the United States.')
 time.sleep(2)
-print("'\nWe'll also look at") 
+print("\nWe'll also look at") 
 time.sleep(2)
 print('what people are saying')
 time.sleep(2)
@@ -67,6 +67,7 @@ time.sleep(2)
 #DEALBREAKER responses that will force an Exit
 print('***ROUND ONE: ELIMINATION***\n')
 time.sleep(2)
+print('\U0001f6a7', '\U0001f6a7', '\U0001f6a7')
 print("We'll start with a brief ELIMINATION ROUND.\n")
 time.sleep(2)
 print("Let's establish that you meet MINIMAL criteria to adopt a shelter pet.\n")
@@ -80,27 +81,29 @@ time.sleep(2)
 print('Adopting a shelter pet is a lifetime commitment.\n')
 time.sleep(2)
 print('Although people are often excited by the idea of adopting a puppy,')
-time.sleep(2)
-print('we recommend adopting a dog with a life stage that matches yours.\n')
-time.sleep(2)
+time.sleep(3)
+print('we recommend adopting a dog with a life stage that matches your age.\n')
+time.sleep(3)
 print('The average life expectancy for an adult in 2020 is 78 years.\n')
-time.sleep(2) 
+time.sleep(3) 
 print('The average life expectancy for a dog is 12 years.\n')
-time.sleep(2)
+time.sleep(3)
 print('78 human years (adult life span) divided by 12 dog years (dog life span)')
-time.sleep(2)
+time.sleep(3)
 print('equates to 6.5 human years for each dog year.\n')
 time.sleep(2)
 print("Let's divide your age by 6.5 to find the equivalent in dog years.\n")
+time.sleep(3)
+owner_age = int(input('Enter your age in years. Use a whole number between 1 and 100: \n'))
+while owner_age <= 0 or owner_age > 100:
+    owner_age = int(input("Please choose a number between 1 and 100: "))
 time.sleep(2)
-owner_age = input('Enter your age in years. Use a whole number between 1 and 100: \n')
-time.sleep(2)
-if int(owner_age) < 16:
+if (owner_age) < 16:
     print("We're sorry.")
     print('For this exercise, you must be at least 16 years old to adopt a shelter dog.')
     print('Please consider volunteering at your local animal shelter instead.')
     exit()
-elif int(owner_age) > 66:
+elif (owner_age) > 66:
     print("We're sorry.")
     print("The maximum recommended age of a pet owner is 66 years old.")
     print("That's the average human life expenctancy (78yrs)")
@@ -153,6 +156,8 @@ print('Can you afford this financial commitment?')
 time.sleep(2)
 money = input('Type y for YES or n for NO: ').lower()
 time.sleep(2)
+while not (money == 'y' or money == 'n'):
+    money = input('Invalid input. Enter y or n: ')
 #Game will end if user answers NO
 #If Y, proceed
 if money == 'n':
@@ -177,27 +182,43 @@ print('\nInstructions: Enter the number of hours you spend')
 time.sleep(2)
 print('on each of the activities below, per day.') 
 time.sleep(2)
-print("Please type a whole number between 0-24 for each answer.")
+print("Please type a whole number between 0-24 for each answer.\n")
 time.sleep(2)
-print('Hours spent is calculated using whole numbers.\n')
+sleep = int(input('Hours spent sleeping per day: '))
+while sleep < 0 or sleep > 24:
+    sleep = int(input("Please choose a number between 0 and 24: "))
 time.sleep(2)
-sleep = input('Hours spent sleeping per day: ')
+cook = int(input('Hours spent cooking + eating per day: '))
+while cook < 0 or cook > 24:
+    cook = int(input("Please choose a number between 0 and 24: "))
 time.sleep(2)
-cook = input('Hours spent cooking + eating per day: ') 
+groom = int(input('Hours spent on showering, hair, makeup, shaving, etc. daily: '))
+while groom < 0 or groom > 24:
+    groom = int(input("Please choose a number between 0 and 24: "))
 time.sleep(2)
-groom = input('Hours spent on showering, hair, makeup, shaving, etc. daily: ')
+commute = int(input('Hours spent commuting daily: '))
+while commute < 0 or commute > 24:
+    commute = int(input("Please choose a number between 0 and 24: ")) 
 time.sleep(2)
-commute = input('Hours spent commuting daily: ') 
+work = int(input('Hours spent working daily: '))
+while work < 0 or work > 24:
+    work = int(input("Please choose a number between 0 and 24: "))
 time.sleep(2)
-work = input('Hours spent working daily: ')
+errands = int(input('Hours spent running errands daily: '))
+while errands < 0 or errands > 24:
+    errands = int(input("Please choose a number between 0 and 24: "))
 time.sleep(2)
-errands = input('Hours spent running errands daily: ')
+gym = int(input('Hours spent at the gym daily: '))
+while gym < 0 or gym > 24:
+    gym = int(input("Please choose a number between 0 and 24: "))
 time.sleep(2)
-gym = input('Hours spent at the gym daily: ')
+children = int(input('Hours spent caring for children or other adults daily: '))
+while children < 0 or children > 24:
+    children = int(input("Please choose a number between 0 and 24: "))
 time.sleep(2)
-children = input('Hours spent caring for children or other adults daily: ')
-time.sleep(2)
-community = input('Hours spent volunteering, coaching, or at church daily: ')
+community = int(input('Hours spent volunteering, coaching, or at church daily: '))
+while community < 0 or community > 24:
+    community = int(input("Please choose a number between 0 and 24: "))
 time.sleep(2)
 # grinning face with sweat
 print("\U0001F605")
@@ -247,15 +268,20 @@ print('\nHave you been the primary caregiver for a dog before?')
 time.sleep(2)
 experience = input('Type y for YES or n for NO: ').lower() 
 time.sleep(2)
-#Corresponds to pet dictionary: Special Needs
+while not (experience == 'y' or experience == 'n'):
+    experience = input('Invalid input. Enter y or n: ')
 if experience == 'y':
-    print('\nWould you adopt a dog with Special Needs?')
-    time.sleep(2)
-    key2 = specialneeds
-    value2 = input('Type y for YES or n for NO:')
+    print('\nYou may want to consider adopting a puppy.')
 else:
     print('\nWe recommend that NOVICE pet owners adopt a SENIOR dog.')
     time.sleep(2)
+#Special Needs
+print('\nWould you adopt a dog with Special Needs?')
+time.sleep(2)
+key2 = specialneeds
+value2 = input('Type y for YES or n for NO:')
+while not (value2 == 'y' or value2 == 'n'):
+    value2 = input('Invalid input. Enter y or n: ')
 
 #INDOOR OUTDOOR LIVING SPACE
 print('\n***INDOOR + OUTDOOR LIVING SPACE***')
@@ -273,20 +299,23 @@ print('Modest home with fenced yard?')
 time.sleep(2)
 print('Large home with 1+ acres of fenced property?')
 time.sleep(2)
-key3 = livingspace
-value3 = input('\nType a for Apt.Condo, s for Small Home, or l for House.Land: ').lower()
+home_size = input('\nType a for Apt.Condo, s for Small Home, or l for House.Land: ').lower()
 time.sleep(2)
-if value3 == 'a':
+while not (home_size == 'a' or home_size == 's' or home_size == 'l'):
+    home_size = input('Invalid input. Enter a, s, or l: ')
+if home_size == 'a':
     print('\nA SMALL dog may be most comfortable in an apartment or condominium.')
-elif value3 == 's':
+elif home_size == 's':
     print ('\nA MEDIUM dog may be most comfortable in a modest home.')
 else:
     print('\nYour living space will accomodate a LARGE dog.')
 time.sleep(2)
 print('\nREALITY CHECK: What size dog is best for you?')
 time.sleep(2)
-bestsize = input('\nType s for Small, m for Medium, or l for Large: ').lower()
+value3 = input('\nType s for Small, m for Medium, or l for Large: ').lower()
 time.sleep(2)
+while not (value3 == 's' or value3 == 'm' or value3 == 'l'):
+    value3 = input('Invalid input. Enter s, m, or l: ')
 
 #Life Stage
 print('\n***LIFE STAGE***')
@@ -309,6 +338,10 @@ time.sleep(2)
 key4 = lifestage
 value4 = input('Type p for Puppy, a for Adolescent, d for Adult, or s for Senior: ').lower()
 time.sleep(2)
+while not (value4 == 'p' or value4 == 'a' or value4 == 'd' or value4 == 's'):
+    value4 = input('Invalid input. Enter p, a, d or s: ')
+
+#Thank user for perserverance
 print('\nOnly TWO more questions!')
 time.sleep(2)
 # smiling face with halo
@@ -331,6 +364,8 @@ time.sleep(2)
 key5 = social
 value5 = input('Type sp for Solo Pursuits, sg for Small Groups, or cc for Comfortable in Crowds: ').lower()
 time.sleep(2)
+while not (value5 == 'sp' or value5 == 'sg' or value5 == 'cc'):
+    value5 = input('Invalid input. Enter sp, sg, or cc: ')
 
 #Preference for Male or Female pet
 print('\n***MALE OR FEMALE PET?***')
@@ -340,6 +375,8 @@ time.sleep(2)
 key6 = sex
 value6 = input("Type m for Male or f for Female: ").lower()
 time.sleep(2)
+while not (value6 == 'm' or value6 == 'f'):
+    value6 = input('Invalid input. Enter m or f: ')
 
 #Leave Section One
 print('\n***PHASE ONE COMPLETED***')
@@ -349,19 +386,14 @@ time.sleep(2)
 print("\U0001F601")
 print("You're one step closer to sucessfully adopting a shelter pet.\n")
 
-#PRINT User Dictionary Here
-#started with owner{}
-#established key1 = firstname
+#INTERMISSION
+#Pull user input into a list
+owner_list = [value1, value2, value3, value4, value5, value6]
 print('We recorded the answers you gave us as follows:\n')
-key1 = firstname
-key2 = specialneeds
-key3 = livingspace
-key4 = lifestage
-key5 = social
-key6 = sex
-#owner {key1: value1, key2: value2, key3: value3, key4: value4, key5: value5, key6: value6 }
-owner = {key1: value1, key2: value2, key3: value3, key4: value4, key5: value5, key6: value6}
-print(owner)
+print(owner_list)
+time.sleep(2)
+print('In this program, we will match your answers to available shelter dog attributes.\n')
+time.sleep(2)
 
 ##PHASE TWO: Data Analysis + Visualization
 #DATA ON US SHELTER PETS
@@ -371,17 +403,19 @@ print('\nOn the surface,')
 time.sleep(2)
 print('America appears to be a nation of PET LOVERS.')
 time.sleep(2)
-print('According to the American Pet Products Association') 
+print('\nAccording to the American Pet Products Association') 
 time.sleep(2)
-print('APPA 2020 Pet Owner Survey:')
+print('APPA 2020 Pet Owner Survey:\n')
 time.sleep(2)
 print('*Americans spent over $100 BILLION') 
 time.sleep(2)
 print('on pet products and services in 2020')
 time.sleep(2)
-print('*70 percent of all US households include at least 1 pet')
+print('*\n70 percent of all US households include at least 1 pet')
 time.sleep(2)
-print('*44 percent of all US households include at least 1 dog')
+print('*\n44 percent of all US households include at least 1 dog')
+time.sleep(2)
+print("\nBut there's a darker side to this story.")
 time.sleep(2)
 print('\nSadly, according to the ASPCA,') 
 time.sleep(2)
@@ -396,27 +430,20 @@ time.sleep(2)
 print('will be EUTHANIZED within 12 months.') 
 time.sleep(2)
 
-#Analyze open-source JSON file re: shelter pets (dogs) in US
-#REQUIREMENT: Read file into your app MUST USE pc of data from file in the program
-#save as variable "data"
+#Read open-source csv file re: shelter pets (dogs) in US into program
+#save as variable "intake"
 #show headers
-#pull two attributes out of the dataset + plot them
-#Dogs Adopted vs. Euthanized
-#Question: Does using data from the set in a plot = using it in the program? 
-#REQUIREMENT: Visualize data in color plot
+#visualize total # of dogs by intake reason
 
 #User closes screen with the plot
-keepgoing = input('Press c to Continue or q to Quit: ')
-if keepgoing == 'q':
-    exit()
-else:
-    print('That was interesting!')
+print("That was interesting - but DEPRESSING.")
+time.sleep(2)
+print("Let's look at data that is more UPLIFTING.")
 
 #SHELTER PETS AND SOCIAL MEDIA
 #REQUIREMENT: Connect to an API, read data into your app
-#Use Twython and Twiter API, aggregate tweets using DOG + "shelter", "rescue", "adopt"
-#Before you practice adopting a dog in our make-believe Shelter,
-#let's check Twitter to see what people are sharing about adopting a rescue DOG
+#Use Twiter API + Twython or Tweepy
+#aggregate tweets using DOG + "shelter", "rescue", "adopt"
 #REQUIREMENT: Analyze text and display info about it, Visualize data
 #Use aggregated tweets to create a Word cloud shaped like a dog (dog "mask")
 
@@ -438,40 +465,60 @@ print("You're one step closer to sucessfully adopting a shelter pet.\n")
 #On the day you visit our imaginary shelter
 #there are VARIABLEnumber pets available for adoption.
 #Let's start the matching process! 
-#MEET THE PETS
-#REQUIREMENT: create DICTIONARY, several values, retrieve at least 1 value & use it
-#Today's DOGS available for adoption are:
-# Print dictionary contents as Pet Name, Special Needs, Size, Life Stage, Social, Gender
+
+#Convert owner_list values to the value pairs in a new owner dictionary
+#Dictionary keys are:
+#key1 = 'firstname'
+#key2 = 'specialneeds'
+#key3 = 'bestsize'
+#key4 = 'lifestage'
+#key5 = 'social'
+#key6 = 'sex'
+#owner = {key1: value1, key2: value2, key3: value3, key4: value4, key5: value5, key6: value6 }
+#print(owner)
+
 #PET MATCH
-#perfectpet = [start with FULL set]
-#LOOP: Iterate over values in Owner Dictionary
-#Compare against value in same indice position in Pet Dictionary
-#In each loop, additional dogs will be deleted
-#DECISION
-#If perfectpet < 1:
-#We're sorry. None of our available pets met your prerequisites.
-#Please return next week and try again. 
-#There will always be AWESOME dogs looking for STABLE forever homes. Exit game.
+#convert petstoadopt csv file to a LIST of dictionaries
+#Each dictionary in the list holds the attributes of a single pet
+#compare values in owner dictionary against values in petstoadopt dictionary
+#start with full complement of available pets...petstoadopt
+#reduce number of available pets with each iteration
+#delete any pets that don't match owner key:value pair
+#matching pets go into new dictionary - perfectpets
+#After each looping comparison, print number of perfectpets that match owner criteria
+#Today we have a total of *establish length dogs up for adoption. 
+# Let's start by  
+
+#PET MATCH RESULTS
+#If length of resulting petstoadopt match < 1:
+#print("We're sorry. None of the available pets met your prerequisites.")"
+#print('Please return next week and try again.') 
+#print('There will always be AWESOME dogs looking for STABLE forever homes.') 
+#Exit game.
 #elif perfect == 1:
 #KISMET! You found your ONE AND ONLY perfect shelter pet!
 #else:
 #Surprise! Multiple pets met your criteria. How will you decide?
 
 #PHASE FOUR: COUNTDOWN TIMER AND PROGRAM ENDS
-#COUNTING DOWN TO A REAL RESCUE 
+#COUNTDOWN TO ADOPTION IRL 
 #REQUIREMENT: Calculate + display data based on an external factor (like a count down)
-#How are you feeling? 
-#Ready to adopt a shelter pet in real life! 
+#You've assessed your situation, looked at data, and practiced visiting a shelter. 
+#Now you're ready to adopt a shelter pet in real life! 
 #Use our Countdown Timer to get ready for your BIG DAY.
-#Assess your personal situation (money, time, living space, etc.)
-#Create YOUR list of pet prerequisites
-#Visit local shelter and assess available pets
-#Find a match? Fill out adoption paperwork
-#No match? Come back next weekend 
-#Wait 7-10 days for review and approval of adoption application 
-#Receive adoption decision
-#Buy supplies 
-#Pet-proof your indoor and outdoor living space
-#END GOAL: TODAY'S THE DAY! Bring home your new 4-Legged Friend
+#24 hours: Assess your personal situation (money, time, living space, etc.)
+#24 hours: Confirm your list of pet prerequisites
+#24 hours: Visit local shelter and assess available pets
+#1 hour: Find a match? Fill out adoption paperwork
+#168 hours: Wait 7 days for review and approval of adoption application 
+#24 hours: Receive adoption decision
+#48 hours: Buy supplies 
+#48 hours: Pet-proof your indoor and outdoor living space
+#0 hours: TODAY'S THE DAY! Bring home your new 4-Legged Friend
+#print("\U0001F43E", "\U0001F43E", "\U0001F43E")#pawprints
 #Thank you for taking the time to explore successfully adopting a shelter pet. 
+#Here is a piece of art to enjoy! 
+#Remember: Volunteer - or donate - whenever you can.
+#print('\U0001F496', '\U0001F496', '\U0001F496')#hearts
+#And if you can do more - Rescue, Foster, Adopt. 
 #Bonus: Add a Turtle graphics drawing of a dog with the words Rescue Foster Adopt
