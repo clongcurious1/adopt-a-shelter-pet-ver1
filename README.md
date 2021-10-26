@@ -20,7 +20,16 @@ I had the good fortune to adopt an AMAZING shelter dog 11 years ago. Through no 
 This project was created in her honor with the goal of helping educate prospective pet owners and facilitate healthy, happy, long-term pet/owner relationships.
 
 **PACKAGES TO INSTALL**
-As of October 26, 2021, there are no additional packages that need to be installed to run this program. 
+**Matplotlib** is a comprehensive library for creating static, animated, and interactive visualizations in Python. 
+Documentation: 
+https://pypi.org/project/matplotlib/
+https://matplotlib.org/stable/users/installing.html 
+
+Terminal command for Windows 10: 
+Python -m pip install -U pip
+Python -m pip install -U matplotlib
+You will see messaging in the terminal regarding download and installation of tools including pillow, numpy, and matplotlib. WAIT for message stating install was successfully completed. 
+
 
 **SECTION 1: Educate User & Gather User Information**
 
