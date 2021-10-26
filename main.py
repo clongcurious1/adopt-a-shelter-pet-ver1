@@ -112,6 +112,9 @@ elif (owner_age) > 66:
     print('Please consider volunteering at your local animal shelter instead.')
     exit()
 else:
+    #REQUIREMENT MET: Build a conversion tool (calculator) to convert
+    #one form of user input to another and display it
+    #converts human years to dog years
     dog_years = int(owner_age) / 6.5
     print('\nVoila! Your age in dog years is', int(dog_years), 'years.')
     print("Let's continue.")
@@ -388,11 +391,16 @@ print("You're one step closer to sucessfully adopting a shelter pet.\n")
 
 #INTERMISSION
 #Pull user input into a list
+#Requirement met: Create a list or dictionary with multiple values
+#Use at least one value elsewhere in your program
+#Will be used in Section 3: Pet Match
 owner_list = [value1, value2, value3, value4, value5, value6]
 print('We recorded the answers you gave us as follows:\n')
 print(owner_list)
 time.sleep(2)
-print('In this program, we will match your answers to available shelter dog attributes.\n')
+print("Later in this program, we'll will match your answers")
+print('to attributes of available shelter dogs')
+print('to identify your Perfect Pet Match.\n')
 time.sleep(2)
 
 ##PHASE TWO: Data Analysis + Visualization
@@ -436,16 +444,20 @@ time.sleep(2)
 #visualize total # of dogs by intake reason
 
 #User closes screen with the plot
-print("That was interesting - but DEPRESSING.")
+input('Press any key to continue: \n')
 time.sleep(2)
-print("Let's look at data that is more UPLIFTING.")
+print('That was interesting - but DEPRESSING.')
+time.sleep(2)
+print("Let's do something fun instead!")
+#print("Let's look at data that is more UPLIFTING.")
 
 #SHELTER PETS AND SOCIAL MEDIA
-#REQUIREMENT: Connect to an API, read data into your app
+#Explore in version 2
+# Connect to an API, read data into your app
 #Use Twiter API + Twython or Tweepy
 #aggregate tweets using DOG + "shelter", "rescue", "adopt"
-#REQUIREMENT: Analyze text and display info about it, Visualize data
-#Use aggregated tweets to create a Word cloud shaped like a dog (dog "mask")
+#perform sentiment analysis
+#display positive words as Word cloud shaped like a dog (dog "mask")
 
 print('\n***PHASE TWO COMPLETED***')
 print('You appear to be a level-headed human who can delay gratification!')
