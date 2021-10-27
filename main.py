@@ -1,5 +1,7 @@
 #Notes re: packages installed - see README for details
 #Imports 
+import matplotlib.pyplot as plt
+import csv 
 import math
 import time
 #Functions
@@ -383,13 +385,13 @@ while not (value6 == 'm' or value6 == 'f'):
 
 #Leave Section One
 print('\n***PHASE ONE COMPLETED***')
+print("\U0001F3C6")
 print('\nCongratulations! You completed the Prerequisites section.\n')
 time.sleep(2)
 # beaming face with smiling eyes
 print("\U0001F601")
 print("You're one step closer to sucessfully adopting a shelter pet.\n")
 
-#INTERMISSION
 #Pull user input into a list
 #Requirement met: Create a list or dictionary with multiple values
 #Use at least one value elsewhere in your program
@@ -397,17 +399,17 @@ print("You're one step closer to sucessfully adopting a shelter pet.\n")
 owner_list = [value1, value2, value3, value4, value5, value6]
 print('We recorded the answers you gave us as follows:\n')
 print(owner_list)
-time.sleep(2)
-print("Later in this program, we'll will match your answers")
+time.sleep(3)
+print("\nLater in this program, we'll will match your answers")
 print('to attributes of available shelter dogs')
 print('to identify your Perfect Pet Match.\n')
-time.sleep(2)
+time.sleep(3)
 
 ##PHASE TWO: Data Analysis + Visualization
 #DATA ON US SHELTER PETS
-print('***SHELTER PET STATISTICS***')
+print('***SECTION 2: SHELTER PET DATA***\n')
 time.sleep(2)
-print('\nOn the surface,') 
+print('On the surface,') 
 time.sleep(2)
 print('America appears to be a nation of PET LOVERS.')
 time.sleep(2)
@@ -415,40 +417,70 @@ print('\nAccording to the American Pet Products Association')
 time.sleep(2)
 print('APPA 2020 Pet Owner Survey:\n')
 time.sleep(2)
-print('*Americans spent over $100 BILLION') 
+print('Americans spent over $100 BILLION') 
 time.sleep(2)
 print('on pet products and services in 2020')
 time.sleep(2)
-print('*\n70 percent of all US households include at least 1 pet')
+print('\n70 percent of all US households include at least 1 pet')
 time.sleep(2)
-print('*\n44 percent of all US households include at least 1 dog')
+print('\n44 percent of all US households include at least 1 dog')
 time.sleep(2)
 print("\nBut there's a darker side to this story.")
 time.sleep(2)
 print('\nSadly, according to the ASPCA,') 
 time.sleep(2)
 print('7.6 million companion animals end up in US shelters each year.')
+time.sleep(3)
+print('\nMany are surrendered due to behavior problems') 
 time.sleep(2)
-print('\nMost are surrendered due to behavior problems,') 
-time.sleep(2)
-print('outgrowing their living space, and/or economic instability.')
+print("or an owner's economic instability.")
 time.sleep(2)
 print('\n35 percent of these animals (2.7 million)')
 time.sleep(2) 
 print('will be EUTHANIZED within 12 months.') 
 time.sleep(2)
 
-#Read open-source csv file re: shelter pets (dogs) in US into program
-#save as variable "intake"
-#show headers
-#visualize total # of dogs by intake reason
+#introduce data
+print("\nLet's look at a simple bar graph")
+time.sleep(2)
+print('illustrating various intake reasons') 
+time.sleep(2)
+print('for 2000+ dogs at a shelter in Indianapolis.')
+time.sleep(2)
+print('\nData for the graph came from an open data set on Kaggle.\n')
+
+#Read csv file re: shelter pets + intake reasons program
+x = []
+y = []
+
+with open ('csv.dogs2visualize.csv','r') as csvfile:
+    plots = csv.reader(csvfile, delimiter = ',')
+
+    for row in plots:
+        x.append(row[0])
+        y.append(int(row[1]))
+
+plt.bar(x, y, color = 'g', width = 0.72, label = 'Dogs')
+plt.xlabel('Intake Reasons')
+plt.ylabel('# of Dogs')
+plt.title('Shelter Dog Sample: Intake Reasons')
+plt.legend()
+plt.xticks(rotation=30, ha='right')
+plt.show()
 
 #User closes screen with the plot
 input('Press any key to continue: \n')
 time.sleep(2)
-print('That was interesting - but DEPRESSING.')
+print('OK. That was interesting - but DEPRESSING.')
 time.sleep(2)
-print("Let's do something fun instead!")
+print('The most frequently recorded intake reasons are')
+time.sleep(2)
+print("However, a 'stray' dog is not necessarily a runaway.")
+print('Many strays are pets dumped by their owners.')
+time.sleep(2)
+print('Deep breath...')
+time.sleep(2)
+print("Let's move on to something fun!")
 #print("Let's look at data that is more UPLIFTING.")
 
 #SHELTER PETS AND SOCIAL MEDIA
@@ -460,9 +492,10 @@ print("Let's do something fun instead!")
 #display positive words as Word cloud shaped like a dog (dog "mask")
 
 print('\n***PHASE TWO COMPLETED***')
-print('You appear to be a level-headed human who can delay gratification!')
+print("\U0001F947", "\U0001F947")
+print('\nYou appear to be RARE human who can delay gratification!')
 print('You patiently examinded your lifestyle and resources.')
-print('You also reviewed data and social media posts re: shelter pets.')
+print('You also reviewed data re: shelter pets.')
 time.sleep(2)
 print('\nCongratulations!')
 # beaming face with smiling eyes
