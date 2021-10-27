@@ -30,7 +30,6 @@ Python -m pip install -U pip
 Python -m pip install -U matplotlib
 You will see messaging in the terminal regarding download and installation of tools including pillow, numpy, and matplotlib. WAIT for message stating install was successfully completed. 
 
-
 **SECTION 1: Educate User & Gather User Information**
 
 **Summary** – This section introduces the flow of the user experience through four sections of the program. The user can be FORCED to exit the program due to specific responses to the first three questions (**see special instructions below**). If the user successfully passes through the elimination sequence, the user’s response to the following six questions creates a list of prerequisites that are used in Section 3: Pet Match later in the program. 
@@ -51,6 +50,18 @@ Users will be forced to exit the program if they are too young or too old; unabl
 - Build a conversion tool (calculator) that converts user input to another type and displays it. My project converts Human Years to Dog Years. This simple calculation is displayed and shown later in the program to help the user select the preferred Life Stage (puppy, adolescent, adult, senior) of a shelter pet.
 - Create a dictionary or list, populate it with several values, retrieve at least one value and use it in your program. In my program, user input creates values in a User list. That list will later be converted to a dictionary in Section 3: Pet Match.
 
+**SECTION 2: Read, Write, and Visualize Data**
+
+**Summary** – The purpose of this program is to educate potential dog owners regarding the full scope of responsibilities associated with adopting a shelter pet. I wanted to share information re: why animals wind up at shelters. This visualization shows that the top two reasons are the owner’s economic instability, often resulting in (dumped) stray pets.
+
+**Method** – I selected an open data set from Kaggle.com that included intake and physical attribute data on shelter pets in Indianapolis. I removed animals other than dogs from the file, then sorted the remaining dogs by intake reason. I created a simple csv file with only two columns: # of Dogs, Intake Reason. Data is charted in a bar graph using matplotlib. 
+Additional data from the larger file will be read/written into the program separately to create a PET dictionary in Section III.
+
+**Special Instructions** – NONE.
+
+**Code Louisville Project Requirement(s) Met in this Section** 
+- Read data from an external file (text, csv, JSON, etc.) and use that data in your application
+- Visualize data in a graph, chart, or other visual representation of data
 
 
 

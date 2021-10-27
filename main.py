@@ -450,6 +450,7 @@ time.sleep(2)
 print('\nData for the graph came from an open data set on Kaggle.\n')
 
 #Read csv file re: shelter pets + intake reasons program
+#REQUIREMENT MET: read data from external file + visualize it
 x = []
 y = []
 
