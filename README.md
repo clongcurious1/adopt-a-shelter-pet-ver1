@@ -20,6 +20,7 @@ I had the good fortune to adopt an AMAZING shelter dog 11 years ago. Through no 
 This project was created in her honor to help educate prospective pet owners and facilitate mutually beneficial, long-term pet/owner relationships.
 
 **PACKAGES TO INSTALL**
+
 **Matplotlib** is a comprehensive library for creating static, animated, and interactive visualizations in Python. 
 Documentation: 
 https://pypi.org/project/matplotlib/
@@ -29,6 +30,12 @@ Terminal command for Windows 10:
 Python -m pip install -U pip
 Python -m pip install -U matplotlib
 You will see messaging in the terminal regarding download and installation of tools including pillow, numpy, and matplotlib. WAIT for message stating install was successfully completed. 
+
+**Pandas** is a fast, powerful, flexible and easy to use open-source data analysis and manipulation tool, built on top of the Python programming language.
+Terminal command to install: 
+pip install pandas
+Documentation: https://pandas.pydata.org/docs/getting_started/install.html 
+
 
 **SECTION 1: Educate User & Gather User Information**
 
@@ -54,8 +61,9 @@ Users will be forced to exit the program if they are too young or too old; unabl
 
 **Summary** – The purpose of this program is to educate potential dog owners regarding the full scope of responsibilities associated with adopting a shelter pet. I wanted to share information re: why animals wind up at shelters. This visualization shows that the top two reasons are the owner’s economic instability, often resulting in (dumped) stray pets.
 
-**Method** – I selected an open data set from Kaggle.com that included intake and physical attribute data on shelter pets in Indianapolis. I removed animals other than dogs from the file, then sorted the remaining dogs by intake reason. I created a simple csv file with only two columns: # of Dogs, Intake Reason. Data is charted in a bar graph using matplotlib. 
-Additional data from the larger file will be read/written into the program separately to create a PET dictionary in Section III.
+**Method** – I selected an open data set from Kaggle.com that included intake and physical attribute data on shelter animals (dogs, cats, horses, snakes, hamsters...) in Indianapolis. I removed animals other than dogs from the file, then sorted remaining dogs by intake reason. I created a simple csv file with only those two columns: # of Dogs, Intake Reason. Data is visualized two ways: Pandas dataframe, bar chart. 
+
+Additional data from the larger Kaggle file will be read/written into the program separately to create a PET dictionary in Section III.
 
 **Special Instructions** – NONE.
 

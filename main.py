@@ -1,6 +1,7 @@
 #Notes re: packages installed - see README for details
 
 #Imports 
+import pandas as pd
 import matplotlib.pyplot as plt
 import csv 
 import math
@@ -447,33 +448,21 @@ print('will be EUTHANIZED within 12 months.')
 time.sleep(2)
 
 #introduce data
-print("\nLet's look at a simple bar graph")
+print("\nLet's look at simple table of data")
 time.sleep(2)
 print('illustrating various intake reasons') 
 time.sleep(2)
-print('for 2000+ dogs at a shelter in Indianapolis.')
+print('for 2000+ dogs at a shelter in Indianapolis.\n')
 time.sleep(2)
-print('\nData for the graph came from an open data set on Kaggle.\n')
 
-#Read csv file re: shelter pets + intake reasons program
 #REQUIREMENT MET: read data from external file + visualize it
-x = []
-y = []
-
-with open ('csv.dogs2visualize.csv','r') as csvfile:
-    plots = csv.reader(csvfile, delimiter = ',')
-
-    for row in plots:
-        x.append(row[0])
-        y.append(row[1])
-
-plt.bar(x, y, color = 'g', width = 0.72, label = 'Dogs')
-plt.xlabel('Intake Reasons')
-plt.ylabel('# of Dogs')
-plt.title('Shelter Dog Sample: Intake Reasons')
-plt.legend()
-plt.xticks(rotation=30, ha='right')
-plt.show()
+#pandas reads csv file to create a data frame
+df = pd.read_csv("csv.dogs2visualize.csv")
+#sort data in the dataframe by column Number of Dogs
+#pandas sorts values in ascending order by default
+df.sort_values(by="numberOfDogs")
+#print the resulting data frame
+print(df)
 
 #User closes screen with the plot
 input('Press any key to continue: \n')
@@ -484,10 +473,28 @@ print('\nThe most frequently recorded intake reason')
 time.sleep(2)
 print('is Stray/Dumped.')
 time.sleep(2)
-print('\nDeep breath...')
+print('\nThis is easier to see displayed as a bar chart.\n')
+time.sleep(2)
+
+#display horizontal bar chart using pandas
+data = pd.read_csv("csv.dogs2visualize.csv")
+df = pd.DataFrame(data)
+
+X = list(df.iloc[:, 0])
+Y = list(df.iloc[:, 1])
+
+plt.bar(X,Y, color = 'g')
+#rotate x-labels and align horizontally with bar
+plt.xticks(rotation=30, horizontalalignment="center")
+plt.title("Shelter Dogs - Intake Reasons")
+plt.xlabel('Intake Reasons')
+plt.ylabel("Number of Dogs")
+plt.show()
+
+#User closes screen with the plot
+input('Press any key to continue: \n')
 time.sleep(2)
 print("\nLet's move on to something more fun!")
-#print("Let's look at data that is more UPLIFTING.")
 
 #SHELTER PETS AND SOCIAL MEDIA
 #Explore in version 2
@@ -500,7 +507,9 @@ print("\nLet's move on to something more fun!")
 print('\n***PHASE TWO COMPLETED***')
 print("\U0001F947", "\U0001F947")
 print('\nYou appear to be RARE human who can delay gratification!')
+time.sleep(2)
 print('You patiently examinded your lifestyle and resources.')
+time.sleep(2)
 print('You also reviewed data re: shelter pets.')
 time.sleep(2)
 print('\nCongratulations!')
