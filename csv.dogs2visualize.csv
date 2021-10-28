@@ -1,18 +1,18 @@
-﻿Intake Reason,#Dogs
-Abandoned,100
-AbuseNeglect,15
-Aggressive,21
-Allergies,12
-BadFitForOwnerLifestyle,390
-Biting,135
-BornInShelter,17
-CannotAfford,84
-LandlordIssues,55
-LitterDroppedOff,124
+﻿Intake Reason,Dogs
 MarriageDivorce,11
-OwnerArrested,137
-OwnerDeceased,56
-OwnerMoved,157
-RabiesMonitoring,33
+Allergies,12
+AbuseNeglect,15
+BornInShelter,17
+Aggressive,21
 SickInjured,21
-Stray,1490
+RabiesWatch,33
+LandlordIssues,55
+OwnerDeceased,56
+CannotAfford,84
+Abandoned,100
+LitterDroppedOff,124
+Biting,135
+OwnerArrested,137
+OwnerMoved,157
+OwnerLifestyle,390
+Stray/Dumped,1490

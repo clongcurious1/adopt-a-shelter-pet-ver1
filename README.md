@@ -30,14 +30,6 @@ Python -m pip install -U pip
 Python -m pip install -U matplotlib
 You will see messaging in the terminal regarding download and installation of tools including pillow, numpy, and matplotlib. WAIT for message stating install was successfully completed. 
 
-**COLORAMA** makes ANSI escape character sequences possible in MS Windows, producing colored terminal text and cursor positioning.
-Terminal command:
-pip install colorama
--or-
-conda install -c anaconda colorama
-Documentation https://pypi.org/project/colorama/ 
-<em>As Colorama is MS Windows-specific, Mac users will not see any colored terminal text.</em>
-
 **SECTION 1: Educate User & Gather User Information**
 
 **Summary** – This section introduces the flow of the user experience through four sections of the program. The user can be FORCED to exit the program due to specific responses to the first three questions (**see special instructions below**). If the user successfully passes through the elimination sequence, the user’s response to the following six questions creates a list of prerequisites that are used in Section 3: Pet Match later in the program. 

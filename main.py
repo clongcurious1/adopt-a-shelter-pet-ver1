@@ -1,4 +1,5 @@
 #Notes re: packages installed - see README for details
+
 #Imports 
 import matplotlib.pyplot as plt
 import csv 
@@ -430,16 +431,17 @@ time.sleep(2)
 print('\n44 percent of all US households include at least 1 dog')
 time.sleep(2)
 print("\nBut there's a darker side to this story.")
+print("\U0001F631", "\U0001F631", "\U0001F631")
 time.sleep(2)
 print('\nSadly, according to the ASPCA - ') 
 time.sleep(2)
-print('7.6 million companion animals end up in US shelters each year.')
+print('7.6 million companion animals end up in US shelters each year.\n')
 time.sleep(3)
-print("\nMany are surrendered due to an owner's economic instability") 
+print("Many are surrendered due to an owner's economic instability") 
 time.sleep(2)
-print("or being 'incompatible' with an owner's lifestyle.")
+print("or because they are incompatible with an owner's lifestyle.\n")
 time.sleep(2)
-print('\n35 percent of these animals (2.7 million)')
+print('35 percent of these animals (2.7 million)')
 time.sleep(2) 
 print('will be EUTHANIZED within 12 months.') 
 time.sleep(2)
@@ -463,7 +465,7 @@ with open ('csv.dogs2visualize.csv','r') as csvfile:
 
     for row in plots:
         x.append(row[0])
-        y.append(int(row[1]))
+        y.append(row[1])
 
 plt.bar(x, y, color = 'g', width = 0.72, label = 'Dogs')
 plt.xlabel('Intake Reasons')
@@ -478,14 +480,13 @@ input('Press any key to continue: \n')
 time.sleep(2)
 print('OK. That was interesting - but DEPRESSING.')
 time.sleep(2)
-print('The most frequently recorded intake reasons are')
+print('\nThe most frequently recorded intake reason')
 time.sleep(2)
-print("However, a 'stray' dog is not necessarily a runaway.")
-print('Many strays are pets dumped by their owners.')
+print('is Stray/Dumped.')
 time.sleep(2)
-print('Deep breath...')
+print('\nDeep breath...')
 time.sleep(2)
-print("Let's move on to something fun!")
+print("\nLet's move on to something more fun!")
 #print("Let's look at data that is more UPLIFTING.")
 
 #SHELTER PETS AND SOCIAL MEDIA
@@ -509,6 +510,8 @@ print("You're one step closer to sucessfully adopting a shelter pet.\n")
 
 #PHASE 3
 #SHELTER VISIT 
+print('***SECTION 3: SHELTER PET MATCHING***\n')
+time.sleep(2)
 #In this exercise, we will evauluate available pets, 
 #comparing their attributes 
 #against the adoption prerequisites you entered earlier. 
