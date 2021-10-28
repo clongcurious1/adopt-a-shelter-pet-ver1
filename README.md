@@ -7,17 +7,17 @@ First, information is gathered about the user (age, income, available leisure ti
 
 Next, the user is presented with a data visualization illustrating reasons why animals “arrive” at shelters – including owner economic instability, anti-social animal behaviors, divorce, etc.
 
-The user’s input responses from the initial Q&A section are then compared against values in a dictionary of 100 potential shelter pets available for adoption. The result of this “pet match” are displayed.
+The user’s input responses from the initial Q&A section are then compared against values in a dictionary of 100 potential shelter pets available for adoption. The results of this “pet match” are communicated to the user.
 
-Finally, a Turtle drawing of a dog is displayed to the user with the reminder to “Save Lives: Rescue, Adopt, Foster.”
+In the final section of the program, the user is presented with a Countdown Timer that shows time necessary to prepare to adopt a pet in real life. A Turtle Graphics drawing of a dog is displayed to the user with the reminder to “Save Lives: Rescue, Adopt, Foster.”
 
-This program was created as a capstone project for an introductory Python class taken through Code Louisville in Fall 2021. 
+This program was created as a capstone project (on Windows10 OS) for an introductory Python class taken through Code Louisville in Fall 2021. 
 
-In addition to meeting a set of specifications to pass the class, this project also helped me explore adopting a new shelter pet in my own life. 
+In addition to meeting a set of specifications to pass the class, this project also helped me explore adopting a new shelter pet. 
 
-I had the good fortune to adopt an AMAZING shelter dog 11 years ago. Through no fault of her own, she had been returned to shelters three times – due to negligent owners and abuse - in her life before I met her at a local animal adopted event. My furry companion passed away in the Spring. 
+I had the good fortune to adopt an AMAZING shelter dog 11 years ago. Through no fault of her own, she had been returned to shelters three times in her life – due to negligent owners and abuse - as a puppy, a pregnant adolescent, and a neglected adult - before I met her as a senior dog at a local shelter pet adoption event. 
 
-This project was created in her honor with the goal of helping educate prospective pet owners and facilitate healthy, happy, long-term pet/owner relationships.
+This project was created in her honor to help educate prospective pet owners and facilitate mutually beneficial, long-term pet/owner relationships.
 
 **PACKAGES TO INSTALL**
 **Matplotlib** is a comprehensive library for creating static, animated, and interactive visualizations in Python. 
@@ -29,6 +29,14 @@ Terminal command for Windows 10:
 Python -m pip install -U pip
 Python -m pip install -U matplotlib
 You will see messaging in the terminal regarding download and installation of tools including pillow, numpy, and matplotlib. WAIT for message stating install was successfully completed. 
+
+**COLORAMA** makes ANSI escape character sequences possible in MS Windows, producing colored terminal text and cursor positioning.
+Terminal command:
+pip install colorama
+-or-
+conda install -c anaconda colorama
+Documentation https://pypi.org/project/colorama/ 
+<em>As Colorama is MS Windows-specific, Mac users will not see any colored terminal text.</em>
 
 **SECTION 1: Educate User & Gather User Information**
 

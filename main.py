@@ -4,7 +4,9 @@ import matplotlib.pyplot as plt
 import csv 
 import math
 import time
+
 #Functions
+
 #Variables
 hoursperday = 24
 firstname = str()
@@ -13,6 +15,7 @@ bestsize = str()
 lifestage = str()
 social = str()
 sex = ()
+
 #Other necessary stuff
 owner = {}
 key1 = firstname
@@ -21,6 +24,7 @@ key3 = bestsize
 key4 = lifestage
 key5 = social
 key6 = sex
+
 #SECTION ONE Chatbot
 #Introduce project to the User and collect input
 #Elimination round (3 questions) force game EXIT
@@ -427,13 +431,13 @@ print('\n44 percent of all US households include at least 1 dog')
 time.sleep(2)
 print("\nBut there's a darker side to this story.")
 time.sleep(2)
-print('\nSadly, according to the ASPCA,') 
+print('\nSadly, according to the ASPCA - ') 
 time.sleep(2)
 print('7.6 million companion animals end up in US shelters each year.')
 time.sleep(3)
-print('\nMany are surrendered due to behavior problems') 
+print("\nMany are surrendered due to an owner's economic instability") 
 time.sleep(2)
-print("or an owner's economic instability.")
+print("or being 'incompatible' with an owner's lifestyle.")
 time.sleep(2)
 print('\n35 percent of these animals (2.7 million)')
 time.sleep(2) 
