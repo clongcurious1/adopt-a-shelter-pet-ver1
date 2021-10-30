@@ -1,0 +1,101 @@
+name,specialneeds,bestsize,lifestage,social,sex,breed,id
+Trixie,n,m,d,sp,f ,Australian Shepherd,63933
+HBC Beagle - Minnie,y,m,d,sp,f ,Beagle,62120
+Bunny,n,m,p,sp,f ,Beagle,64365
+Lucy Farmer,n,m,s,sp,f ,Beagle,64608
+Lucky,n,m,s,sp,f ,Beagle,64528
+Jax,n,m,p,sp,m ,Beagle/Border Collie Mix,64402
+Buster,n,m,p,sp,m ,Beagle/Border Collie Mix,64401
+Dutchess,n,l,s,sp,f ,Beagle/Bully Breed Mix,61630
+Cleo,n,l,a,sp,f ,Bernese Mountain Dog,64244
+Baby,n,s,s,sp,f ,Bichon Frise,55787
+Wendy,n,l,s,sg,f ,Bloodhound,64270
+Bella,n,s,a,sg,f ,Boston Terrier,63984
+Deacon,n,l,d,sg,m ,Bouvier des Flanders,64314
+Daphne,n,l,s,sg,f ,Bouvier des Flanders,64313
+Kabri,n,l,a,sg,f ,Boxer/Hound Mix,64167
+Nobel,n,m,d,sg,m ,Bull Terrier,64515
+Leo,n,l,a,sg,m ,Bully Breed Mix,64553
+Chato,n,l,a,sg,m ,Bully Breed Mix,64463
+Roxie,n,l,a,sg,f ,Bully Breed Mix,64377
+Russell,n,l,a,sg,m ,Bully Breed Mix,64372
+Willis,n,l,a,cc,m ,Bully Breed Mix,64291
+Winston,n,l,a,cc,m ,Bully Breed Mix,64279
+Boston,n,l,a,cc,m ,Bully Breed Mix,64165
+Jax,n,l,a,cc,m ,Bully Breed Mix,64134
+Nila,n,l,a,cc,f ,Bully Breed Mix,64044
+CV,n,l,a,cc,m ,Bully Breed Mix,64027
+Stout,n,l,a,cc,m ,Bully Breed Mix,63982
+Stellan,n,l,a,cc,m ,Bully Breed Mix,63981
+Sheeba,n,l,a,cc,f ,Bully Breed Mix,63980
+Roscoe,n,l,a,cc,m ,Bully Breed Mix,63901
+Skye,y,l,d,sp,f ,Bully Breed Mix,61917
+Welches,n,l,d,sp,m ,Bully Breed Mix,64215
+Precious,n,l,d,sp,f ,Bully Breed Mix,64183
+Panda Bear,n,l,d,sp,m ,Bully Breed Mix,64182
+Eli,n,l,d,sp,m ,Bully Breed Mix,64081
+Solo,n,l,d,sp,m ,Bully Breed Mix,64060
+Hank,n,l,s,sp,m ,Bully Breed Mix,64192
+Duke,n,l,d,sp,m ,Catahoula Leopard Dog/Mountain Cur Mix,64422
+Ruger,n,m,a,sp,m ,Chesapeake Bay Retriever Mix,64468
+Tiny,n,s,p,sp,m ,Chihuahua,64370
+Scooter,y,s,s,sg,m ,Chihuahua,58998
+Dozer,n,l,s,sg,m ,Coonhound,64606
+Kasey,n,s,s,sg,f ,Dachshund,58867
+Dobie,y,l,p,sg,m ,Doberman Pinscher,58942
+Graham,n,m,d,sg,m ,English Springer Spaniel,64512
+Snickers,n,s,a,sg,f ,Fox Terrier,64105
+Yankee,n,m,d,sg,m ,Fox Terrier/Heeler Mix,64103
+Bandit6,n,m,d,sg,m ,Fox Terrier/Heeler Mix,64102
+Doodle,n,m,d,sg,m ,Fox Terrier/Heeler Mix,64101
+Tate,n,l,a,sg,f ,German Shepherd ,64245
+Zahra,n,l,s,sg,f ,Golden Retriever,63148
+Possum,n,l,d,cc,m ,Golden Retriever/Great Pyrenees Mix,64508
+Nox,n,l,d,cc,m ,Heeler,63919
+Luna,n,l,d,cc,f ,Hound,63941
+Nigel,n,l,s,cc,m ,Hound,64485
+Farrah,n,l,s,cc,f ,Hound/Bully Breed Mix,62102
+Aimee,n,l,p,cc,f ,Hound Mix,64492
+Tonka,n,l,s,cc,f ,Hound Mix,58168
+Whiskey,y,l,s,cc,m ,Hound Mix,60358
+Nakita,y,l,a,cc,f ,Husky,63426
+Shona,n,l,d,cc,f ,Husky,64062
+Belion,n,l,p,cc,m ,Husky,64337
+Molly,y,s,d,sp,f ,Jack Russell Terrier Mix,58210
+Rocky Hartfield,n,l,d,sp,m ,Labrador Retriever,64609
+Luna,n,l,s,sp,f ,Labrador Retriever,58191
+Chocolate,n,l,s,sp,f ,Labrador Retriever,64470
+Skye,n,l,p,sp,f ,Labrador Retriever/Border Collie Mix,64445
+Bojack,y,l,a,sp,m ,Labrador Retriever/Hound Mix,58631
+Gilbert,n,l,p,sp,m ,Labrador Retriever Mix,64531
+Shawn Spencer,n,l,p,sp,m ,Labrador Retriever Mix,64465
+Doji,n,l,a,sp,m ,Labrador Retriever/Poodle Mix,64166
+Casey,n,l,a,sp,m ,Labrador Retriever/Shepherd Mix,64168
+Sparkles,n,s,s,sp,f ,Maltese,64381
+Molly,n,s,a,sg,f ,Miniature Pinscher,63940
+Renata,n,s,p,sg,f ,Miniature Pinscher,64384
+Becca,n,s,p,sg,f ,Miniature Pinscher,64383
+Obie,n,s,s,sg,f,Miniature Pinscher,55992
+Chili Dog,n,s,s,sg,m ,Miniature Pinscher,64466
+Mildred,n,l,p,sg,f ,Boxer/Lab Mix,64360
+Murphy,n,l,d,sg,m ,Mountain Cur,64304
+Little Dude,n,s,d,sg,m ,Poodle,64353
+Freya,n,s,d,sg,f ,Poodle,64352
+Belle,n,s,s,sg,f ,Rat Terrier,58732
+Tray,y,s,s,sg,f,Rat Terrier,62759
+Alfred,n,m,a,cc,m ,Retriever Mix,63904
+Lane,n,m,d,cc,m ,Retriever Mix,63905
+Binx,n,l,a,cc,m ,Rottweiler,64475
+Lucy,n,s,s,cc,f ,Miniature Schnauzer,58251
+Indy,n,l,d,cc,f ,Shepherd Mix,64276
+Elijah,n,l,p,cc,m ,Shepherd Mix,64311
+Mason,n,l,s,cc,m ,Shepherd Mix,64440
+Oliver,n,s,d,cc,m ,Shih Tzu,64288
+Chloe,n,s,p,cc,f ,Shih Tzu,64421
+Cassian,n,l,p,cc,m ,Siberian Husky,64442
+Bailey7,n,s,s,sp,f ,Terrier,59229
+Maggie,n,s,s,sg,f ,West Highland White Terrier,64273
+Sunny,y,l,d,cc,f ,Yellow Lab/Cattle Dog mix,62789
+Daisy,n,s,d,sp,f ,Yorkshire Terrier,64228
+Regina,n,s,s,sg,f ,Yorkshire Terrier,55752
+Reece,n,s,s,cc,m ,Yorkshire Terrier,64328

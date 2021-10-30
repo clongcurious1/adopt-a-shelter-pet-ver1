@@ -7,8 +7,6 @@ import csv
 import math
 import time
 
-#Functions
-
 #Variables
 hoursperday = 24
 firstname = str()
@@ -16,7 +14,13 @@ specialneeds = str()
 bestsize = str()
 lifestage = str()
 social = str()
-sex = ()
+sex = str()
+
+#functions
+def build_user(value1, value2, value3, value4, value5, value6):
+    '''Return a dictionary of information about a user'''
+    user = {'name': value1, 'specialneeds': value2, 'bestsize': value3, 'lifestage': value4, 'social': value5, 'sex': value6}
+    return user
 
 #Other necessary stuff
 owner = {}
@@ -265,6 +269,7 @@ else:
 print('***ROUND TWO: PREREQUISITES***\n')
 print('***INTRODUCE YOURSELF***\n')
 time.sleep(2)
+#dict key1 is name
 value1 = input('Enter your first name: ') 
 time.sleep(2)
 print("\U0001F44b")
@@ -287,7 +292,7 @@ else:
     print('\nWe recommend that NOVICE pet owners adopt a SENIOR dog.')
     time.sleep(2)
 #Special Needs
-print('\nWould you adopt a dog with Special Needs?')
+print('\nWould you like to adopt a dog with Special Needs?')
 time.sleep(2)
 key2 = specialneeds
 value2 = input('Type y for YES or n for NO:')
@@ -323,6 +328,7 @@ else:
 time.sleep(2)
 print('\nREALITY CHECK: What size dog is best for you?')
 time.sleep(2)
+#key3 bestsize
 value3 = input('\nType s for Small, m for Medium, or l for Large: ').lower()
 time.sleep(2)
 while not (value3 == 's' or value3 == 'm' or value3 == 'l'):
@@ -346,7 +352,7 @@ print('\nSenior...7+ years old\n')
 time.sleep(2)
 print('Which pet Life Stage aligns with your age in dog years?')
 time.sleep(2)
-key4 = lifestage
+#key4 lifestage
 value4 = input('Type p for Puppy, a for Adolescent, d for Adult, or s for Senior: ').lower()
 time.sleep(2)
 while not (value4 == 'p' or value4 == 'a' or value4 == 'd' or value4 == 's'):
@@ -372,7 +378,7 @@ print('Which description below best describes your Social Behavior?')
 time.sleep(2)
 print('Solo Pursuits, Small Groups, or Comfortable in Crowds?\n') 
 time.sleep(2)
-key5 = social
+#key5 social
 value5 = input('Type sp for Solo Pursuits, sg for Small Groups, or cc for Comfortable in Crowds: ').lower()
 time.sleep(2)
 while not (value5 == 'sp' or value5 == 'sg' or value5 == 'cc'):
@@ -383,7 +389,7 @@ print('\n***MALE OR FEMALE PET?***')
 time.sleep(2)
 print('\nFor this exercise, please select either a MALE or FEMALE pet.')
 time.sleep(2)
-key6 = sex
+#key6 sex
 value6 = input("Type m for Male or f for Female: ").lower()
 time.sleep(2)
 while not (value6 == 'm' or value6 == 'f'):
@@ -465,7 +471,7 @@ df.sort_values(by="numberOfDogs")
 print(df)
 
 #User closes screen with the plot
-input('Press any key to continue: \n')
+input("Press any key to continue or 'q' to Quit: \n")
 time.sleep(2)
 print('OK. That was interesting - but DEPRESSING.')
 time.sleep(2)
@@ -483,16 +489,16 @@ df = pd.DataFrame(data)
 X = list(df.iloc[:, 0])
 Y = list(df.iloc[:, 1])
 
-plt.bar(X,Y, color = 'g')
-#rotate x-labels and align horizontally with bar
-plt.xticks(rotation=30, horizontalalignment="center")
+plt.barh(X,Y, color = 'g')
+#rotate y-labels and align horizontally with bar
+plt.xticks(rotation=20, horizontalalignment="center")
 plt.title("Shelter Dogs - Intake Reasons")
-plt.xlabel('Intake Reasons')
-plt.ylabel("Number of Dogs")
+plt.xlabel('Number of Dogs')
+plt.ylabel("Intake Reasons")
 plt.show()
 
 #User closes screen with the plot
-input('Press any key to continue: \n')
+input("Press any key to continue or 'q' to Quit: \n")
 time.sleep(2)
 print("\nLet's move on to something more fun!")
 
@@ -521,25 +527,41 @@ print("You're one step closer to sucessfully adopting a shelter pet.\n")
 #SHELTER VISIT 
 print('***SECTION 3: SHELTER PET MATCHING***\n')
 time.sleep(2)
-#In this exercise, we will evauluate available pets, 
-#comparing their attributes 
-#against the adoption prerequisites you entered earlier. 
-#On the day you visit our imaginary shelter
-#there are VARIABLEnumber pets available for adoption.
-#Let's start the matching process! 
+print('In this exercise, we will evauluate available pets,')
+time.sleep(2) 
+print('comparing their attributes')
+time.sleep(2) 
+print('against the adoption prerequisites')
+time.sleep(2) 
+print('you entered earlier.\n') 
+time.sleep(2)
+print('On the day you visit')
+time.sleep(2)
+print('our imaginary shelter,')
+time.sleep(2)
+print('there are 100 dogs available for adoption.')
+time.sleep(2)
+print("\nLet's start the matching process!") 
+time.sleep(2)
 
 #Convert owner_list values to the value pairs in a new owner dictionary
 #Dictionary keys are:
-#key1 = 'firstname'
+#key1 = 'name'
 #key2 = 'specialneeds'
 #key3 = 'bestsize'
 #key4 = 'lifestage'
 #key5 = 'social'
 #key6 = 'sex'
-#owner = {key1: value1, key2: value2, key3: value3, key4: value4, key5: value5, key6: value6 }
-#print(owner)
+print("We start with your information:\n")
+time.sleep(2)
+#REQUIREMENT MET: 3+functions and/or methods; 1 function must return a value
+owner = build_user(value1, value2, value3, value4, value5, value6)
+print(owner)
 
 #PET MATCH
+print("\nAnd here come today's available dogs!")
+print("\U0001F43E", "\U0001F43E", "\U0001F43E", "\U0001F43E", "\U0001F43E", "\U0001F43E")#pawprints
+print('\nRound One: Matching dogs against your Special Needs criteria - ')
 #convert petstoadopt csv file to a LIST of dictionaries
 #Each dictionary in the list holds the attributes of a single pet
 #compare values in owner dictionary against values in petstoadopt dictionary
@@ -547,9 +569,20 @@ time.sleep(2)
 #reduce number of available pets with each iteration
 #delete any pets that don't match owner key:value pair
 #matching pets go into new dictionary - perfectpets
-#After each looping comparison, print number of perfectpets that match owner criteria
-#Today we have a total of *establish length dogs up for adoption. 
-# Let's start by  
+#After each looping comparison, print number of perfectpets (len function) matching owner criteria
+print('\nAfter Round One, X number of dogs remain in your selection pool.')
+
+#print('\nRound Two: Matching for Best Size per your Indoor/Outdoor space -  )
+#print('\nX number of dogs remain in your selection pool.')
+
+#print('\nRound Three: Matching for Life Stage based on your age -  )
+#print('\nX number of dogs remain in your selection pool.')
+
+#print('\nRound Four: Matching for Social Behavior - ')
+#print('\nX number of dogs remain in your selection pool.') 
+
+#print('\nRound Five: Matching against Male or Female -  )
+#print('\nX number of dogs remain in your selection pool.') 
 
 #PET MATCH RESULTS
 #If length of resulting petstoadopt match < 1:
