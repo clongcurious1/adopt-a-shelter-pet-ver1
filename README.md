@@ -54,8 +54,8 @@ Users will be forced to exit the program if they are too young or too old; unabl
 **Leisure Time** - enter “1” for each time allotment
 
 **Code Louisville Project Requirement(s) Met in this Section:**  
-:paw-prints: Build a conversion tool (calculator) that converts user input to another type and displays it. My project converts Human Years to Dog Years. This simple calculation is displayed and shown later in the program to help the user select the preferred Life Stage (puppy, adolescent, adult, senior) of a shelter pet.
-:paw-prints: Create a dictionary or list, populate it with several values, retrieve at least one value and use it in your program. In my program, user input creates values in a User list. That list will later be converted to a dictionary in Section 3: Pet Match.
+- Build a conversion tool (calculator) that converts user input to another type and displays it. My project converts Human Years to Dog Years. This simple calculation is displayed and shown later in the program to help the user select the preferred Life Stage (puppy, adolescent, adult, senior) of a shelter pet.
+- Create a dictionary or list, populate it with several values, retrieve at least one value and use it in your program. In my program, user input creates 6 values that are combined and displayed in a user list at the end of Section 1.
 
 **SECTION 2: Read, Write, and Visualize Data**
 
@@ -68,8 +68,8 @@ Additional data from the larger Kaggle file will be read/written into the progra
 **Special Instructions** – NONE.
 
 **Code Louisville Project Requirement(s) Met in this Section** 
-:paw-prints: Read data from an external file (text, csv, JSON, etc.) and use that data in your application
-:paw-prints: Visualize data in a graph, chart, or other visual representation of data
+- Read data from an external file (text, csv, JSON, etc.) and use that data in your application
+- Visualize data in a graph, chart, or other visual representation of data. I visualize the data from the .csv file as a Pandas data frame and as a horizontal bar chart.
 
 
 
