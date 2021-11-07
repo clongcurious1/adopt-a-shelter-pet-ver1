@@ -7,6 +7,8 @@ import csv
 import math
 import time
 
+from csv import DictReader
+
 #Variables
 hoursperday = 24
 firstname = str()
@@ -519,7 +521,7 @@ print("You're one step closer to sucessfully adopting a shelter pet.\n")
 
 #PHASE 3
 #SHELTER VISIT 
-print('***SECTION 3: SHELTER PET MATCHING***\n')
+print('***PHASE 3: SHELTER PET MATCHING***\n')
 time.sleep(2)
 print('In this exercise, we will evauluate available pets,')
 time.sleep(2) 
@@ -555,39 +557,132 @@ print(owner)
 #PET MATCH
 print("\nAnd here come today's available dogs!")
 print("\U0001F43E", "\U0001F43E", "\U0001F43E", "\U0001F43E", "\U0001F43E", "\U0001F43E")#pawprints
-print('\nRound One: Matching dogs against your Special Needs criteria - ')
-#convert petstoadopt csv file to a LIST of dictionaries
+time.sleep(2)
+#convert csv.dogs100dictprep.csv file to a LIST of dictionaries
 #Each dictionary in the list holds the attributes of a single pet
+#open file in read mode
+with open('csv.dogs100dictprep.csv', 'r') as read_obj:
+    #pass file object to DictReader(), get DictReader object
+    dict_reader = DictReader(read_obj)
+    #get a list of dictionaries from dict_reader
+    list_of_dict = list(dict_reader)
+    print(list_of_dict)
+
+print("\nYikes! That's confusing.\n")
+time.sleep(2)
+print("\U0001F4A5", "\U0001F4A5", "\U0001F4A5")
+print("Let's use the POWER of P-Y-T-H-O-N")
+print('to quickly return ONLY those dogs that match your needs.')
+time.sleep(2)
+
 #compare values in owner dictionary against values in petstoadopt dictionary
+#assign list_of_dict to a new variable
+petstoadopt = list_of_dict
 #start with full complement of available pets...petstoadopt
-#reduce number of available pets with each iteration
-#delete any pets that don't match owner key:value pair
-#matching pets go into new dictionary - perfectpets
-#After each looping comparison, print number of perfectpets (len function) matching owner criteria
-print('\nAfter Round One, X number of dogs remain in your selection pool.')
+#start matching against user prerequisites
+#rename list_of_dict
+petstoadopt = list_of_dict
+print('\nHere is the full list of available pets:\n')
+print(petstoadopt)
+time.sleep(2)
 
-#print('\nRound Two: Matching for Best Size per your Indoor/Outdoor space -  )
-#print('\nX number of dogs remain in your selection pool.')
+#Round 1 Pet Match: Special Needs (value2)
+#use a dictionary comprehension to match specialneeds:value2
+print ("\nFILTER: Match pets against user's 'specialneeds' answer: \n" )
+#filter by list comprehension to dreate a new list of pet dictionaries
+keyValList = [str(value2)] #value you are matching against
+newList1 = [d for d in petstoadopt if d['specialneeds'] in keyValList]
+print(newList1)
+time.sleep(2)
 
-#print('\nRound Three: Matching for Life Stage based on your age -  )
-#print('\nX number of dogs remain in your selection pool.')
+#How many pet dictionaries are in the new list?
+#Use list comprehension and isinstance()
+result = len([ele for ele in newList1 if isinstance(ele, dict)])
+print("\nSPECIAL NEEDS: The number of matching pets is " + str(result))
+time.sleep(3)
 
-#print('\nRound Four: Matching for Social Behavior - ')
-#print('\nX number of dogs remain in your selection pool.') 
+#Round 2 Pet Match: Best Size (value3)
+#use a dictionary comprehension to match bestsize:value3
+print ("\nFILTER: Match pets against user's 'bestsize' answer: \n" )
+#filter by list comprehension to dreate a new list of pet dictionaries
+keyValList = [str(value3)] #value you are matching against
+newList2 = [d for d in newList1 if d['bestsize'] in keyValList]
+print(newList2)
+time.sleep(2)
 
-#print('\nRound Five: Matching against Male or Female -  )
-#print('\nX number of dogs remain in your selection pool.') 
+#How many pet dictionaries are in the new list?
+#Use list comprehension and isinstance()
+result = len([ele for ele in newList2 if isinstance(ele, dict)])
+print("\nSpecial Needs + Best Size: NEW number of matching pets is " + str(result))
+time.sleep(2)
+
+#Round 3 Pet Match: Life Stage (value4)
+#use a dictionary comprehension to match lifestage:value4
+print ("\nFILTER: Match pets against user's 'lifestage' answer: \n" )
+#filter by list comprehension to dreate a new list of pet dictionaries
+keyValList = [str(value4)] #value you are matching against
+newList3 = [d for d in newList2 if d['lifestage'] in keyValList]
+print(newList3)
+time.sleep(2)
+
+#How many pet dictionaries are in the new list?
+#Use list comprehension and isinstance()
+result = len([ele for ele in newList3 if isinstance(ele, dict)])
+print("\nSpecial Needs, Best Size, Life Stage: NEW number of matching pets is " + str(result))
+time.sleep(2)
+
+#Round 4 Pet Match: Social Needs (value5)
+#use a dictionary comprehension to match social:value5
+print ("\nFILTER: Match pets against user's 'social' answer: \n" )
+#filter by list comprehension to dreate a new list of pet dictionaries
+keyValList = [str(value5)] #value you are matching against
+newList4 = [d for d in newList3 if d['social'] in keyValList]
+print(newList4)
+time.sleep(2)
+
+#How many pet dictionaries are in the new list?
+#Use list comprehension and isinstance()
+result = len([ele for ele in newList4 if isinstance(ele, dict)])
+print("\nSpecial Needs, Best Size, Life Stage, Social Needs: Number of matching pets is " + str(result))
+time.sleep(2)
+
+#Round 5 Pet Match: Sex (value6)
+#use a dictionary comprehension to match sex:value6
+print ("\nFILTER: Match pets against user's 'sex' answer: \n" )
+#filter by list comprehension to dreate a new list of pet dictionaries
+keyValList = [str(value6)] #value you are matching against
+newList5 = [d for d in newList4 if d['sex'] in keyValList]
+print(newList5)
+time.sleep(2)
+
+#How many pet dictionaries are in the new list?
+#Use list comprehension and isinstance()
+result = len([ele for ele in newList5 if isinstance(ele, dict)])
+print("\nSpecial Needs, Best Size, Life Stage, Social Needs, Sex: Number of matching pets is " + str(result))
+time.sleep(2)
 
 #PET MATCH RESULTS
-#If length of resulting petstoadopt match < 1:
-#print("We're sorry. None of the available pets met your prerequisites.")"
-#print('Please return next week and try again.') 
-#print('There will always be AWESOME dogs looking for STABLE forever homes.') 
-#Exit game.
-#elif perfect == 1:
-#KISMET! You found your ONE AND ONLY perfect shelter pet!
-#else:
-#Surprise! Multiple pets met your criteria. How will you decide?
+if result < 1:
+    print("We're sorry. None of today's available pets met your prerequisites.")
+    time.sleep(2)
+    print('Please return next week and try again.') 
+    time.sleep(2)
+    print('There will always be AWESOME dogs looking for STABLE forever homes.') 
+    time.sleep(2)
+elif result == 1:
+    print('KISMET! You found your ONE AND ONLY perfect shelter pet!')
+    time.sleep(2)
+else:
+    print('Surprise! Multiple pets met your criteria. How will you decide?')
+    time.sleep(2)
+
+print('\n***PHASE THREE COMPLETED***')
+print("\U0001F680", "\U0001F680", "\U0001F680")#rockets
+time.sleep(2)
+print('\nCongratulations!')
+# beaming face with smiling eyes
+print("\U0001F601")
+print("You're one step closer to sucessfully adopting a shelter pet.\n")
 
 #PHASE FOUR: COUNTDOWN TIMER AND PROGRAM ENDS
 #COUNTDOWN TO ADOPTION IRL 

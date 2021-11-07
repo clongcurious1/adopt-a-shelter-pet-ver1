@@ -15,11 +15,21 @@ This program was created as a capstone project (on Windows10 OS) for an introduc
 
 In addition to meeting a set of specifications to pass the class, this project also helped me explore adopting a new shelter pet. 
 
-I had the good fortune to adopt an AMAZING shelter dog 11 years ago. Through no fault of her own, she had been returned to shelters three times in her life – due to negligent owners and abuse - as a puppy, a pregnant adolescent, and a neglected adult - before I met her as a senior dog at a local shelter pet adoption event. 
+I had the good fortune to adopt an AMAZING shelter dog 11 years ago. Through no fault of her own, she landed at shelters three times in her life – due to negligent owners and abuse - as a puppy, a pregnant adolescent, and a neglected adult - before I met her as a senior dog at a local shelter pet adoption event. 
 
 This project was created in her honor to help educate prospective pet owners and facilitate mutually beneficial, long-term pet/owner relationships.
 
+**PLEASE READ ENTIRE README BEFORE ATTEMPTING TO CLONE THIS PROJECT**
+
+Please take a few minutes to skim this ReadMe so that you understand the different sections in the project, notice where Special Instructions come into play, and understand packages you must download to run the program. 
+
+**CLONING A REPOSITORY FROM GITHUB TO YOUR LOCAL MACHINE**
+
+If you are not familiar with this process, please follow the steps in this article: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository 
+
 **PACKAGES TO INSTALL**
+
+Once you have successfully downloaded the project to your local machine, you will also need to install these packages before attempting the run this project. 
 
 **Matplotlib** is a comprehensive library for creating static, animated, and interactive visualizations in Python. 
 Documentation: 
@@ -29,13 +39,21 @@ https://matplotlib.org/stable/users/installing.html
 Terminal command for Windows 10: 
 Python -m pip install -U pip
 Python -m pip install -U matplotlib
-You will see messaging in the terminal regarding download and installation of tools including pillow, numpy, and matplotlib. WAIT for message stating install was successfully completed. 
 
+Note: While the commands above worked for me, a user who helped test this program said a simple “pip install matplotlib” worked for him. 
+
+This installation takes A FEW MINUTES. You will see messaging in the terminal regarding download and installation of tools including pillow, numpy, and matplotlib. WAIT for message stating install was successfully completed. 
+ 
 **Pandas** is a fast, powerful, flexible and easy to use open-source data analysis and manipulation tool, built on top of the Python programming language.
 Terminal command to install: 
 pip install pandas
 Documentation: https://pandas.pydata.org/docs/getting_started/install.html 
 
+**MAIN.PY is the file you need to run**
+
+There are a handful of files in this project folder. In the terminal, type **python main.py** to run the correct file. 
+
+Sidebar: Because of the amount of text that runs in the terminal, I tried to add visual interest to the program using emojis. Sadly, they only seem to appear for testers who are using Windows with VS Code as their editor. Users using other editors may only see square tile(s) with a question mark(s) where emojis were supposed to appear. This does not affect how the program runs and will be addressed in a later version. 
 
 **SECTION 1: Educate User & Gather User Information**
 
