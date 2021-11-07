@@ -38,7 +38,7 @@ key6 = sex
 #Elimination round (3 questions) force game EXIT
 #Users who make it through elimination round continue to Round Two: Q&A section
 print('***ADOPT A SHELTER PET***')
-print("\U0001F43E", "\U0001F43E", "\U0001F43E")#pawprints
+print("\U0001F43E", "\U0001F43E", "\U0001F43E", "\U0001F43E", "\U0001F43E")#pawprints
 time.sleep(2)
 print('\nThis program walks you through') 
 time.sleep(2)
@@ -63,7 +63,7 @@ time.sleep(2)
 print('in the United States.')
 time.sleep(2)
 print('\U0001F496', '\U0001F496', '\U0001F496')
-print("\n Finally, we'll use YOUR prerequisites")
+print("\nFinally, we'll use YOUR prerequisites")
 time.sleep(2)
 print('to search for YOUR perfect pet match')
 time.sleep(2)
@@ -597,8 +597,8 @@ time.sleep(2)
 
 #How many pet dictionaries are in the new list?
 #Use list comprehension and isinstance()
-result = len([ele for ele in newList1 if isinstance(ele, dict)])
-print("\nSPECIAL NEEDS: The number of matching pets is " + str(result))
+result1 = len([ele for ele in newList1 if isinstance(ele, dict)])
+print("\nSPECIAL NEEDS: The number of matching pets is " + str(result1))
 time.sleep(3)
 
 #Round 2 Pet Match: Best Size (value3)
@@ -612,8 +612,8 @@ time.sleep(2)
 
 #How many pet dictionaries are in the new list?
 #Use list comprehension and isinstance()
-result = len([ele for ele in newList2 if isinstance(ele, dict)])
-print("\nSpecial Needs + Best Size: NEW number of matching pets is " + str(result))
+result2 = len([ele for ele in newList2 if isinstance(ele, dict)])
+print("\nSpecial Needs + Best Size: NEW number of matching pets is " + str(result2))
 time.sleep(2)
 
 #Round 3 Pet Match: Life Stage (value4)
@@ -627,8 +627,8 @@ time.sleep(2)
 
 #How many pet dictionaries are in the new list?
 #Use list comprehension and isinstance()
-result = len([ele for ele in newList3 if isinstance(ele, dict)])
-print("\nSpecial Needs, Best Size, Life Stage: NEW number of matching pets is " + str(result))
+result3 = len([ele for ele in newList3 if isinstance(ele, dict)])
+print("\nSpecial Needs, Best Size, Life Stage: NEW number of matching pets is " + str(result3))
 time.sleep(2)
 
 #Round 4 Pet Match: Social Needs (value5)
@@ -642,38 +642,46 @@ time.sleep(2)
 
 #How many pet dictionaries are in the new list?
 #Use list comprehension and isinstance()
-result = len([ele for ele in newList4 if isinstance(ele, dict)])
-print("\nSpecial Needs, Best Size, Life Stage, Social Needs: Number of matching pets is " + str(result))
+result4 = len([ele for ele in newList4 if isinstance(ele, dict)])
+print("\nSpecial Needs, Best Size, Life Stage, Social Needs: Number of matching pets is " + str(result4))
 time.sleep(2)
+
+#Commenting out lines 649- 663 because there is a problem with dictreader
+#when dictreader converts my csv file, it adds an extra space for column 6, sex
+#so that the values in the new dictionaries appear with an extra space - 
+#"f " or "m " rather then 'f' or 'm' - which crashes the program
+#could not find any explanation online - will need to resolve at a later date
 
 #Round 5 Pet Match: Sex (value6)
 #use a dictionary comprehension to match sex:value6
-print ("\nFILTER: Match pets against user's 'sex' answer: \n" )
+#print ("\nFILTER: Match pets against user's 'sex' answer: \n" )
 #filter by list comprehension to dreate a new list of pet dictionaries
-keyValList = [str(value6)] #value you are matching against
-newList5 = [d for d in newList4 if d['sex'] in keyValList]
-print(newList5)
-time.sleep(2)
+#keyValList = [str(value6)] #value you are matching against
+#newList5 = [d for d in newList4 if d['sex'] in keyValList]
+#print(newList5)
+#time.sleep(2)
 
 #How many pet dictionaries are in the new list?
 #Use list comprehension and isinstance()
-result = len([ele for ele in newList5 if isinstance(ele, dict)])
-print("\nSpecial Needs, Best Size, Life Stage, Social Needs, Sex: Number of matching pets is " + str(result))
-time.sleep(2)
+#result5 = len([ele for ele in newList5 if isinstance(ele, dict)])
+#print("\nSpecial Needs, Best Size, Life Stage, Social Needs, Sex: Number of matching pets is " + str(result5))
+#time.sleep(2)
 
 #PET MATCH RESULTS
-if result < 1:
+if result4 < 1:
     print("We're sorry. None of today's available pets met your prerequisites.")
     time.sleep(2)
     print('Please return next week and try again.') 
     time.sleep(2)
     print('There will always be AWESOME dogs looking for STABLE forever homes.') 
     time.sleep(2)
-elif result == 1:
+elif result4 == 1:
     print('KISMET! You found your ONE AND ONLY perfect shelter pet!')
     time.sleep(2)
 else:
     print('Surprise! Multiple pets met your criteria. How will you decide?')
+    time.sleep(2)
+    print('This could easily happen in real life. What would you do?')
     time.sleep(2)
 
 print('\n***PHASE THREE COMPLETED***')
@@ -685,10 +693,16 @@ print("\U0001F601")
 print("You're one step closer to sucessfully adopting a shelter pet.\n")
 
 #PHASE FOUR: COUNTDOWN TIMER AND PROGRAM ENDS
-#COUNTDOWN TO ADOPTION IRL 
-#REQUIREMENT: Calculate + display data based on an external factor (like a count down)
-#You've assessed your situation, looked at data, and practiced visiting a shelter. 
-#Now you're ready to adopt a shelter pet in real life! 
+print('***PHASE 4: COUNTDOWN TO ADOPTING A PET IN REAL LIFE***')
+time.sleep(2)
+#REQUIREMENT MET: Calculate + display data based on an external factor (like a count down)
+print("\nYou've learned so much!")
+time.sleep(2)
+print("You've assessed your situation, looked at data,")
+time.sleep(2)
+print('and practiced meeting adoptable pets at a make-believe shelter.') 
+time.sleep(2)
+print("\nNow you're ready to adopt a shelter pet in real life!\n") 
 #Use our Countdown Timer to get ready for your BIG DAY.
 #24 hours: Assess your personal situation (money, time, living space, etc.)
 #24 hours: Confirm your list of pet prerequisites

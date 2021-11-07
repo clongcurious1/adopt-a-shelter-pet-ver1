@@ -89,6 +89,16 @@ Additional data from the larger Kaggle file will be read/written into the progra
 - Read data from an external file (text, csv, JSON, etc.) and use that data in your application
 - Visualize data in a graph, chart, or other visual representation of data. I visualize the data from the .csv file as a Pandas data frame and as a horizontal bar chart.
 
+**SECTION 3: Perfect Pet Match Exercise**
+
+**Summary** – This section matches the pet adoption prerequisite values input by the user in Section 1 against the attributes of 100 pets stored as a list of dictionaries. 
+
+**Method** – A csv file with 100 “dog” rows and columns of attributes is passed as a file object to DictReader(), converted to a list of dictionaries, and then the list is printed. The comparison of user prerequisites against dog attributes happens one key, one value at a time. The matching pet dictionaries and number of matching pets are printed to the screen. At the end, the user may – or may not – have any pet matches. It varies each time the program is run based on user input. 
+
+**Special Instructions** – None. 
+
+**Code Louisville Project Requirement(s) Met in this Section** 
+-Create and call at least 3 functions or methods, at least one of which must return a value used elsewhere in your code. The build_user function is defined at the beginning of the program. This function returns an “owner” dictionary. The function is called in Section III and the return value is printed.
 
 
 
