@@ -100,6 +100,26 @@ Additional data from the larger Kaggle file will be read/written into the progra
 **Code Louisville Project Requirement(s) Met in this Section** 
 - Create and call at least 3 functions or methods, at least one of which must return a value used elsewhere in your code. The build_user function is defined at the beginning of the program. This function returns an “owner” dictionary. The function is called in Section III and the return value is printed.
 
+**SECTION 4: Countdown to Adopt a Shelter Pet in Real Life**
+
+**Summary** – In this section, user is told that the average amount of time to process a shelter adoption form and reach a decision is approximately 14 days. A countdown timer is printed to the terminal, starting with today’s date, and counting forward over the next 14 days, one day at a time. For each new date, a new activity is recommended to prepare to bring home a shelter pet. 
+
+**Method** – Import datetime module. After getting current date using datetime.datetime.now(), the countdown by day from the current date is accomplished using datetime.timedelta(days=x).
+
+**Special Instructions** – None.
+
+**Code Louisville Project Requirement(s) Met in this Section** 
+Calculate and display data based on an external factor (example: get the current date and display how many days remaining until some event). I got the current date and then planned forward, calculating and printing multiple dates, up to 14 days out from the current date.  
+
+**IDEAS for FUTURE VERSIONS of this Program**
+
+**Version 2** - In Section 2 (Data and Visualization), add an additional section. The new section would involve using the Twitter API and possibly Tweepy or Twython to aggregate a set of tweets including keywords (adopt a dog, adopted a dog, adopted a shelter dog, rescue dog…). Sentiment analysis would be performed on the group of Tweets so that only the positive statements were retained. Those statements would then be broken down into single words and the recurrence of the words would be calculated. Ultimately, the most frequently recurring 150 words would be displayed in a Word Cloud in the shape of a dog (using a mask to control the shape). 
+
+**Version 3** - Code a GUI for the Countdown Calendar in Section 4.
+
+**Version 4** - Create a web app using Django. 
+
+**Version 5** - Expand the program, and all options within, allowing user to specify selection of a dog OR a cat. 
 
 
 
