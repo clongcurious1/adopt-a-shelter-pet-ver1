@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import csv 
 import math
 import time
+import datetime
 
 from csv import DictReader
 
@@ -322,7 +323,7 @@ elif home_size == 's':
 else:
     print('\nYour living space will accomodate a LARGE dog.')
 time.sleep(2)
-print('\nREALITY CHECK: What size dog is best for you?')
+print('\nREALITY CHECK: What size dog do you prefer?')
 time.sleep(2)
 #key3 bestsize
 value3 = input('\nType s for Small, m for Medium, or l for Large: ').lower()
@@ -568,12 +569,13 @@ with open('csv.dogs100dictprep.csv', 'r') as read_obj:
     list_of_dict = list(dict_reader)
     print(list_of_dict)
 
+time.sleep(2)
 print("\nYikes! That's confusing.\n")
 time.sleep(2)
 print("\U0001F4A5", "\U0001F4A5", "\U0001F4A5")
 print("Let's use the POWER of P-Y-T-H-O-N")
 print('to quickly return ONLY those dogs that match your needs.')
-time.sleep(2)
+time.sleep(3)
 
 #compare values in owner dictionary against values in petstoadopt dictionary
 #assign list_of_dict to a new variable
@@ -584,7 +586,7 @@ petstoadopt = list_of_dict
 petstoadopt = list_of_dict
 print('\nHere is the full list of available pets:\n')
 print(petstoadopt)
-time.sleep(2)
+time.sleep(4)
 
 #Round 1 Pet Match: Special Needs (value2)
 #use a dictionary comprehension to match specialneeds:value2
@@ -593,7 +595,7 @@ print ("\nFILTER: Match pets against user's 'specialneeds' answer: \n" )
 keyValList = [str(value2)] #value you are matching against
 newList1 = [d for d in petstoadopt if d['specialneeds'] in keyValList]
 print(newList1)
-time.sleep(2)
+time.sleep(3)
 
 #How many pet dictionaries are in the new list?
 #Use list comprehension and isinstance()
@@ -608,13 +610,13 @@ print ("\nFILTER: Match pets against user's 'bestsize' answer: \n" )
 keyValList = [str(value3)] #value you are matching against
 newList2 = [d for d in newList1 if d['bestsize'] in keyValList]
 print(newList2)
-time.sleep(2)
+time.sleep(3)
 
 #How many pet dictionaries are in the new list?
 #Use list comprehension and isinstance()
 result2 = len([ele for ele in newList2 if isinstance(ele, dict)])
 print("\nSpecial Needs + Best Size: NEW number of matching pets is " + str(result2))
-time.sleep(2)
+time.sleep(3)
 
 #Round 3 Pet Match: Life Stage (value4)
 #use a dictionary comprehension to match lifestage:value4
@@ -623,13 +625,13 @@ print ("\nFILTER: Match pets against user's 'lifestage' answer: \n" )
 keyValList = [str(value4)] #value you are matching against
 newList3 = [d for d in newList2 if d['lifestage'] in keyValList]
 print(newList3)
-time.sleep(2)
+time.sleep(3)
 
 #How many pet dictionaries are in the new list?
 #Use list comprehension and isinstance()
 result3 = len([ele for ele in newList3 if isinstance(ele, dict)])
 print("\nSpecial Needs, Best Size, Life Stage: NEW number of matching pets is " + str(result3))
-time.sleep(2)
+time.sleep(3)
 
 #Round 4 Pet Match: Social Needs (value5)
 #use a dictionary comprehension to match social:value5
@@ -638,17 +640,17 @@ print ("\nFILTER: Match pets against user's 'social' answer: \n" )
 keyValList = [str(value5)] #value you are matching against
 newList4 = [d for d in newList3 if d['social'] in keyValList]
 print(newList4)
-time.sleep(2)
+time.sleep(3)
 
 #How many pet dictionaries are in the new list?
 #Use list comprehension and isinstance()
 result4 = len([ele for ele in newList4 if isinstance(ele, dict)])
 print("\nSpecial Needs, Best Size, Life Stage, Social Needs: Number of matching pets is " + str(result4))
-time.sleep(2)
+time.sleep(3)
 
 #Commenting out lines 649- 663 because there is a problem with dictreader
 #when dictreader converts my csv file, it adds an extra space for column 6, sex
-#so that the values in the new dictionaries appear with an extra space - 
+#values in the new dictionaries appear with an extra space - 
 #"f " or "m " rather then 'f' or 'm' - which crashes the program
 #could not find any explanation online - will need to resolve at a later date
 
@@ -669,17 +671,17 @@ time.sleep(2)
 
 #PET MATCH RESULTS
 if result4 < 1:
-    print("We're sorry. None of today's available pets met your prerequisites.")
+    print("\nWe're sorry. None of today's available pets met your prerequisites.")
     time.sleep(2)
     print('Please return next week and try again.') 
     time.sleep(2)
     print('There will always be AWESOME dogs looking for STABLE forever homes.') 
     time.sleep(2)
 elif result4 == 1:
-    print('KISMET! You found your ONE AND ONLY perfect shelter pet!')
+    print('\nKISMET! You found your ONE AND ONLY perfect shelter pet!')
     time.sleep(2)
 else:
-    print('Surprise! Multiple pets met your criteria. How will you decide?')
+    print('\nSurprise! Multiple pets met your criteria. How will you decide?')
     time.sleep(2)
     print('This could easily happen in real life. What would you do?')
     time.sleep(2)
@@ -703,20 +705,106 @@ time.sleep(2)
 print('and practiced meeting adoptable pets at a make-believe shelter.') 
 time.sleep(2)
 print("\nNow you're ready to adopt a shelter pet in real life!\n") 
-#Use our Countdown Timer to get ready for your BIG DAY.
-#24 hours: Assess your personal situation (money, time, living space, etc.)
-#24 hours: Confirm your list of pet prerequisites
-#24 hours: Visit local shelter and assess available pets
-#1 hour: Find a match? Fill out adoption paperwork
-#168 hours: Wait 7 days for review and approval of adoption application 
-#24 hours: Receive adoption decision
-#48 hours: Buy supplies 
-#48 hours: Pet-proof your indoor and outdoor living space
-#0 hours: TODAY'S THE DAY! Bring home your new 4-Legged Friend
-#print("\U0001F43E", "\U0001F43E", "\U0001F43E")#pawprints
-#Thank you for taking the time to explore successfully adopting a shelter pet. 
-#Here is a piece of art to enjoy! 
-#Remember: Volunteer - or donate - whenever you can.
-#print('\U0001F496', '\U0001F496', '\U0001F496')#hearts
-#And if you can do more - Rescue, Foster, Adopt. 
-#Bonus: Add a Turtle graphics drawing of a dog with the words Rescue Foster Adopt
+
+#REQUIREMENT MET: Calculate + display data based on an external factor (example: like a count down)
+current_date = datetime.datetime.now()
+print("Today's date is", current_date, '.')
+time.sleep(2)
+
+print('\nIt typically takes about 14 days') 
+print('for an animal shelter to process a pet adoption form.')
+time.sleep(2)
+
+print("\nHere's a handy calendar to help you use that time wisely!")
+time.sleep(2)
+
+visit_shelter = current_date + datetime.timedelta(days=1)
+print('\nDate:', visit_shelter)
+print('Tomorrow, visit your local animal shelter.')
+time.sleep(2)
+print('Discuss your adoption prerequisites with shelter staff,') 
+time.sleep(2)
+print('and meet several possible pet matches.') 
+time.sleep(2)
+print("DON'T sign the adoption papers today!")
+time.sleep(2)
+
+think_over = current_date + datetime.timedelta(days=2)
+print('\nDate:', think_over)
+time.sleep(2)
+print('Go home and think about the animals you met.')
+time.sleep(2)
+print('Allow at least 24hrs to make this important decision.')
+time.sleep(2)
+
+make_decision = current_date + datetime.timedelta(days=3)
+print('\nDate:', make_decision)
+time.sleep(2)
+print("Make your decision. If possible, identify your Top 2 choices.")
+time.sleep(2)
+
+submit_form = current_date + datetime.timedelta(days=4)
+print('\nDate:', submit_form)
+time.sleep(2)
+print("Submit your pet adoption application online or in-person.")
+time.sleep(2)
+
+purchase_supplies = current_date + datetime.timedelta(days=5)
+print('\nDate:', purchase_supplies)
+time.sleep(2)
+print("Purchase supplies from local merchants.")
+time.sleep(2)
+
+order_supplies = current_date + datetime.timedelta(days=6)
+print('\nDate:', order_supplies)
+time.sleep(2)
+print("Order any supplies not available locally.")
+time.sleep(2)
+
+screening_call = current_date + datetime.timedelta(days=8)
+print('\nDate:', screening_call)
+time.sleep(2)
+print('Screening Call: Answer any questions from the shelter adoption coordinator.')
+time.sleep(2)
+
+orders_arrive = current_date + datetime.timedelta(days=9)
+print('\nDate:', orders_arrive)
+time.sleep(2)
+print('The supplies you ordered should have arrived.')
+time.sleep(2)
+
+outdoor_space = current_date + datetime.timedelta(days=10)
+print('\nDate:', outdoor_space)
+time.sleep(2)
+print("Dog-proof your outdoor space, including your car.")
+time.sleep(2)
+
+indoor_space = current_date + datetime.timedelta(days=11)
+print('\nDate:', indoor_space)
+time.sleep(2)
+print("Dog-proof your indoor space.")
+time.sleep(2)
+
+notification = current_date + datetime.timedelta(days = 13)
+print('\nDate:', notification)
+time.sleep(2)
+print('Notification received! Your application has been approved!')
+time.sleep(2)
+
+come_home = current_date + datetime.timedelta(days = 14)
+print('\nDate:', come_home)
+time.sleep(2)
+print("Today's the day! Bring home your new furry friend!")
+time.sleep(2)
+
+print('***\nYOU DID IT!***')
+print("\U0001F43E", "\U0001F43E", "\U0001F43E")#pawprints
+time.sleep(2)
+print('\nThank you for completing this Adopt a Shelter Pet exercise.') 
+time.sleep(2)
+print('Remember: To Save Lives - Advocate, Volunteer, or Donate.')
+time.sleep(2)
+print('\U0001F496', '\U0001F496', '\U0001F496')#hearts
+print('And if you can do more - Rescue, Foster, Adopt.') 
+print('***THE END***')
+

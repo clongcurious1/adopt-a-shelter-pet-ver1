@@ -98,7 +98,7 @@ Additional data from the larger Kaggle file will be read/written into the progra
 **Special Instructions** – None. 
 
 **Code Louisville Project Requirement(s) Met in this Section** 
--Create and call at least 3 functions or methods, at least one of which must return a value used elsewhere in your code. The build_user function is defined at the beginning of the program. This function returns an “owner” dictionary. The function is called in Section III and the return value is printed.
+- Create and call at least 3 functions or methods, at least one of which must return a value used elsewhere in your code. The build_user function is defined at the beginning of the program. This function returns an “owner” dictionary. The function is called in Section III and the return value is printed.
 
 
 
